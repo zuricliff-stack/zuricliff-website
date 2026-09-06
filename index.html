@@ -1750,7 +1750,7 @@
     function toggle() {
       /* Ab 2000 px dauerhaft sichtbar — ausgeblendet nur dort, wo sie stoert:
          in der Buchungssektion selbst (dort steht das Formular) und ueber dem Footer. */
-      const show = window.scrollY > 2000 && !stayVisible && !footVisible;
+      const show = !stayVisible && !footVisible;
       bar.classList.toggle('visible', show);
       document.body.classList.toggle('sticky-on', show);
       document.documentElement.style.setProperty('--sticky-h', (show ? bar.offsetHeight : 0) + 'px');
