@@ -494,7 +494,7 @@
   @media (max-width: 640px) { .cta-band .wrap { flex-direction: column; align-items: flex-start; } .cta-band .btn { width: 100%; text-align: center; } }
 
   /* --- v93: Sticky-CTA-Leiste --- */
-  .sticky-cta { position: fixed; left: 0; right: 0; bottom: var(--cb-h, 0px); z-index: 150; display: flex; align-items: center; justify-content: space-between; gap: 1rem; padding: 0.85rem clamp(1.25rem, 5vw, 3rem); background: rgba(15,14,12,0.94); backdrop-filter: blur(10px); border-top: 1px solid rgba(184,148,63,0.28); transform: translateY(calc(100% + var(--cb-h, 0px) + 8px)); transition: transform 0.45s cubic-bezier(0.22,1,0.36,1); }
+  .sticky-cta { position: fixed; left: 0; right: 0; bottom: var(--cb-h, 0px); z-index: 150; display: flex; align-items: center; justify-content: space-between; gap: 1rem; padding: 0.85rem clamp(1.25rem, 5vw, 3rem) calc(0.85rem + env(safe-area-inset-bottom, 0px)); background: rgba(15,14,12,0.94); backdrop-filter: blur(10px); border-top: 1px solid rgba(184,148,63,0.28); transform: translateY(calc(100% + var(--cb-h, 0px) + env(safe-area-inset-bottom, 0px) + 14px)); transition: transform 0.45s cubic-bezier(0.22,1,0.36,1); }
   .sticky-cta.visible { transform: translateY(0); }
   .sticky-cta-text { font-size: 0.72rem; letter-spacing: 0.11em; text-transform: uppercase; color: var(--text-light); margin: 0; }
   .sticky-cta-text b { color: var(--gold-light); font-weight: 400; }
