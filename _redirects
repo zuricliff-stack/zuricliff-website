@@ -1,0 +1,9 @@
+# Kurzlinks fuer Social-Bios und Story-Sticker
+# Instagram kodiert # zu %23 — deshalb hash-freie Einstiege
+
+/stay     /#stay    301
+/stay/    /#stay    301
+/book     /#stay    301
+/book/    /#stay    301
+/buchen   /#stay    301
+/buchen/  /#stay    301
