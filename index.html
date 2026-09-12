@@ -1908,5 +1908,22 @@
 </div>
 <a href="mailto:info@zuricliff.com" class="float-contact float-email" aria-label="Email us"><svg viewBox="0 0 24 24" fill="none" stroke-width="1.5"><path d="M3 6l9 7 9-7M3 6h18v12H3V6z"/></svg></a>
 <a href="https://wa.me/255671269639" target="_blank" rel="noopener" class="float-contact float-whatsapp" aria-label="Chat on WhatsApp"><svg viewBox="0 0 24 24" fill="none" stroke-width="1.6"><path d="M3 21l1.6-4.8A8 8 0 1112 20a8 8 0 01-4.5-1.4L3 21z"/><path d="M8.5 9.5c0 4 3 6.5 6.5 6.5"/></svg></a>
+<script>
+(function(){
+  function pos(el){
+    if(el.closest('nav')||el.closest('.nav-right')) return 'nav';
+    if(el.closest('.hero')) return 'hero';
+    if(el.closest('footer')) return 'footer';
+    var s=el.closest('[class*="sticky"]');
+    if(s) return 'sticky';
+    return 'inline';
+  }
+  document.querySelectorAll('a[href="#stay"]').forEach(function(a){
+    a.addEventListener('click', function(){
+      if (typeof gtag === 'function') gtag('event', 'stay_cta_click', { event_category: 'booking_funnel', event_label: pos(a), cta_text: (a.textContent||'').trim().slice(0,40) });
+    });
+  });
+})();
+</script>
 </body>
 </html>
