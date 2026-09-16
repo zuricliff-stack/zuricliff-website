@@ -350,15 +350,23 @@
   .gallery-grid { display: grid; grid-template-columns: repeat(3, 1fr); grid-auto-rows: 260px; gap: 4px; }
   .gallery-grid figure { position: relative; overflow: hidden; margin: 0; }
   .gallery-grid figure.large { grid-column: span 2; grid-row: span 2; }
-  .gallery-grid img { width: 100%; height: 100%; object-fit: cover; transition: transform 0.7s ease; }
-  .gallery-grid figure:hover img { transform: scale(1.045); }
+  .gallery-grid img { width: 100%; height: 100%; object-fit: cover; transition: transform 0.62s cubic-bezier(0.19, 1, 0.22, 1); }
+  .gallery-grid figure:hover img { transform: scale(1.06); }
+  .gallery-grid figure.wide { grid-column: span 2; }
+  .gallery-grid figure::after {
+    content: ""; position: absolute; left: 0; right: 0; bottom: 0; height: 42%;
+    background: linear-gradient(to top, rgba(0,0,0,0.58), rgba(0,0,0,0));
+    opacity: 0.8; transition: opacity 0.62s cubic-bezier(0.19, 1, 0.22, 1); pointer-events: none;
+  }
+  .gallery-grid figure:hover::after { opacity: 1; }
   .gallery-grid figcaption {
-    position: absolute; bottom: 1rem; left: 1.2rem; font-size: 0.6rem; letter-spacing: 0.2em; text-transform: uppercase;
-    color: #fff; text-shadow: 0 1px 8px rgba(0,0,0,0.85);
+    position: absolute; bottom: 1rem; left: 1.2rem; z-index: 2; font-size: 0.6rem; letter-spacing: 0.2em; text-transform: uppercase;
+    color: #fff;
   }
   @media (max-width: 760px) {
     .gallery-grid { grid-template-columns: 1fr 1fr; grid-auto-rows: 200px; }
     .gallery-grid figure.large { grid-column: span 2; grid-row: span 1; }
+    .gallery-grid figure.wide { grid-column: auto; }
   }
 
   /* LOCATION */
@@ -880,7 +888,7 @@
         <picture><source srcset="img/zuri-cliff-villa-entrance-ocean-view.webp" type="image/webp"><img class="lb-img" src="img/zuri-cliff-villa-entrance-ocean-view.jpg" width="1672" height="806" alt="Entrance hallway opening to ocean view at Zuri Cliff villa" loading="lazy"></picture>
         <figcaption data-i18n="capEntrance">Entrance</figcaption>
       </figure>
-      <figure>
+      <figure class="wide">
         <picture><source srcset="img/zuri-cliff-villa-living-lounge-ocean-view.webp" type="image/webp"><img class="lb-img" src="img/zuri-cliff-villa-living-lounge-ocean-view.jpg" width="1672" height="806" alt="Living room lounge with sheer curtains and ocean view at Zuri Cliff villa" loading="lazy"></picture>
         <figcaption data-i18n="capLivingLounge">Living Lounge</figcaption>
       </figure>
@@ -892,11 +900,11 @@
         <picture><source srcset="img/zuri-cliff-villa-outdoor-lounge-courtyard.webp" type="image/webp"><img class="lb-img" src="img/zuri-cliff-villa-outdoor-lounge-courtyard.jpg" width="1672" height="884" alt="Outdoor lounge courtyard at Zuri Cliff villa" loading="lazy"></picture>
         <figcaption data-i18n="capCourtyard">Courtyard Lounge</figcaption>
       </figure>
-      <figure>
+      <figure class="wide">
         <picture><source srcset="img/zuri-cliff-villa-master-bedroom-poolside-ensuite.webp" type="image/webp"><img class="lb-img" src="img/zuri-cliff-villa-master-bedroom-poolside-ensuite.jpg" width="1672" height="806" alt="Master bedroom opening onto the pool terrace at Zuri Cliff villa" loading="lazy"></picture>
         <figcaption data-i18n="capBedroom">Bedroom</figcaption>
       </figure>
-      <figure>
+      <figure class="wide">
         <picture><source srcset="img/zuri-cliff-villa-master-bathroom-double-vanity.webp" type="image/webp"><img class="lb-img" src="img/zuri-cliff-villa-master-bathroom-double-vanity.jpg" width="1672" height="806" alt="Master bathroom with double vanity at Zuri Cliff villa" loading="lazy"></picture>
         <figcaption data-i18n="capMasterBath">Master Bathroom</figcaption>
       </figure>
