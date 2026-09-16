@@ -596,7 +596,9 @@
     .rate-card .price small { display: block; font-size: 0.6rem; }
     .rate-card .season-months { flex-basis: 100%; }
   }
-</style>
+
+    .deep-link a { text-decoration: underline; text-underline-offset: 3px; text-decoration-thickness: 1px; }
+  </style>
 <!-- Google tag (gtag.js) -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-JM8MX1LTEF"></script>
 <script>
@@ -633,10 +635,11 @@
   <a href="#top" class="logo"><img src="img/logo.png" alt="Zuri Cliff" class="logo-img"></a>
   <div class="nav-right">
     <nav>
-      <a href="#villa" data-i18n="navVilla">Villa</a>
-      <a href="#location" data-i18n="navLocation">Location</a>
+      <a href="/villa/" data-i18n="navVilla">Villa</a>
+      <a href="/makunduchi/" data-i18n="navLocation">Location</a>
+      <a href="/rates/" data-i18n="navRates">Rates</a>
+      <a href="/getting-here/" data-i18n="navGetting">Getting here</a>
       <a href="#stay" class="nav-cta" data-i18n="navStay">Stay</a>
-      <a href="#guide" data-i18n="navGuide">Guide</a>
     </nav>
     <div class="lang-switch">
       <button type="button" class="active" data-lang="en" onclick="setLang('en')">EN</button>
@@ -1209,7 +1212,7 @@
     en: {
       greenWeek:"Green Season Week &middot; 1&ndash;7 May 2027 &middot; $400 / night &middot; minimum 7 nights",
       deepVilla:"Inside the villa &mdash; the full tour", deepLocation:"Makunduchi and the south coast", deepRates:"Rates and seasons", deepGetting:"Getting here &mdash; flights, visa, transfer",
-      navVilla:"Villa", navLocation:"Location", navGuide:"Guide", navStay:"Stay", navInquire:"Enquire",
+      navVilla:"Villa", navLocation:"Location", navRates:"Rates", navGetting:"Getting here", navGuide:"Guide", navStay:"Stay", navInquire:"Enquire",
       eyebrow:"Makunduchi &nbsp;·&nbsp; South Coast &nbsp;·&nbsp; Zanzibar",
       heroTag:"A private home at the edge of the Indian Ocean — for those who know the difference.",
       heroBtn:"Inquire About Your Stay",
@@ -1271,7 +1274,7 @@
     de: {
       greenWeek:"Green Season Week &middot; 1.&ndash;7. Mai 2027 &middot; $400 / Nacht &middot; mindestens 7 Nächte",
       deepVilla:"Die Villa im Detail", deepLocation:"Makunduchi und die Südküste", deepRates:"Preise und Saisons", deepGetting:"Anreise &mdash; Flüge, Visum, Transfer",
-      navVilla:"Villa", navLocation:"Lage", navGuide:"Reiseguide", navStay:"Aufenthalt", navInquire:"Anfragen",
+      navVilla:"Villa", navLocation:"Lage", navRates:"Preise", navGetting:"Anreise", navGuide:"Reiseguide", navStay:"Aufenthalt", navInquire:"Anfragen",
       eyebrow:"Makunduchi &nbsp;·&nbsp; Südküste &nbsp;·&nbsp; Sansibar",
       heroTag:"Ein privates Zuhause am Rand des Indischen Ozeans — für jene, die den Unterschied kennen.",
       heroBtn:"Aufenthalt anfragen",
@@ -1333,7 +1336,7 @@
     fr: {
       greenWeek:"Green Season Week &middot; 1&ndash;7 mai 2027 &middot; $400 / nuit &middot; minimum 7 nuits",
       deepVilla:"La villa en détail", deepLocation:"Makunduchi et la côte sud", deepRates:"Tarifs et saisons", deepGetting:"Arriver ici &mdash; vols, visa, transfert",
-      navVilla:"Villa", navLocation:"Lieu", navGuide:"Guide", navStay:"Séjour", navInquire:"Contact",
+      navVilla:"Villa", navLocation:"Lieu", navRates:"Tarifs", navGetting:"Accès", navGuide:"Guide", navStay:"Séjour", navInquire:"Contact",
       eyebrow:"Makunduchi &nbsp;·&nbsp; Côte Sud &nbsp;·&nbsp; Zanzibar",
       heroTag:"Une maison privée au bord de l'océan Indien — pour ceux qui savent faire la différence.",
       heroBtn:"Demander votre séjour",
@@ -1395,7 +1398,7 @@
     it: {
       greenWeek:"Green Season Week &middot; 1&ndash;7 maggio 2027 &middot; $400 / notte &middot; minimo 7 notti",
       deepVilla:"La villa nel dettaglio", deepLocation:"Makunduchi e la costa sud", deepRates:"Tariffe e stagioni", deepGetting:"Come arrivare &mdash; voli, visto, transfer",
-      navVilla:"Villa", navLocation:"Posizione", navGuide:"Guida", navStay:"Soggiorno", navInquire:"Contatti",
+      navVilla:"Villa", navLocation:"Posizione", navRates:"Tariffe", navGetting:"Come arrivare", navGuide:"Guida", navStay:"Soggiorno", navInquire:"Contatti",
       eyebrow:"Makunduchi &nbsp;·&nbsp; Costa Sud &nbsp;·&nbsp; Zanzibar",
       heroTag:"Una casa privata sul bordo dell'Oceano Indiano — per chi conosce la differenza.",
       heroBtn:"Richiedi il tuo soggiorno",
@@ -1457,7 +1460,7 @@
     es: {
       greenWeek:"Green Season Week &middot; 1&ndash;7 mayo 2027 &middot; $400 / noche &middot; mínimo 7 noches",
       deepVilla:"La villa en detalle", deepLocation:"Makunduchi y la costa sur", deepRates:"Tarifas y temporadas", deepGetting:"Cómo llegar &mdash; vuelos, visado, traslado",
-      navVilla:"Villa", navLocation:"Ubicación", navGuide:"Guía", navStay:"Estancia", navInquire:"Contacto",
+      navVilla:"Villa", navLocation:"Ubicación", navRates:"Tarifas", navGetting:"Cómo llegar", navGuide:"Guía", navStay:"Estancia", navInquire:"Contacto",
       eyebrow:"Makunduchi &nbsp;·&nbsp; Costa Sur &nbsp;·&nbsp; Zanzíbar",
       heroTag:"Una casa privada al borde del Océano Índico — para quienes saben apreciar la diferencia.",
       heroBtn:"Solicita tu estancia",
