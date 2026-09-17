@@ -44,3 +44,12 @@ footer a:hover{color:var(--gold-light)}
 .villa-map .leaflet-control-attribution { font-size: 9px; background: rgba(255,255,255,0.75); }
 .villa-marker { width: 18px; height: 18px; border-radius: 50%; background: var(--gold); box-shadow: 0 0 0 5px rgba(184,148,63,0.28), 0 1px 6px rgba(0,0,0,0.45); }
 .coords { font-size: 0.68rem; letter-spacing: 0.18em; text-transform: uppercase; color: var(--text-mid); margin: 0; }
+
+
+/* Sprachwaehler auf den Unterseiten, 17.09.2026 */
+.top .wrap { display: flex; align-items: center; gap: 1.6rem; flex-wrap: wrap; }
+.lang-switch { display: flex; gap: 0.5rem; margin-left: auto; }
+.lang-switch button { background: none; border: none; padding: 0; cursor: pointer; font-family: var(--body); font-size: 0.68rem; letter-spacing: 0.12em; text-transform: uppercase; color: var(--text-mid); transition: color 0.3s ease; }
+.lang-switch button:hover { color: var(--gold-light); }
+.lang-switch button.active { color: var(--gold-light); }
+@media (max-width: 720px) { .lang-switch { margin-left: 0; width: 100%; gap: 0.9rem; } }
