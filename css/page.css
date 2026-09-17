@@ -37,3 +37,10 @@ footer a{color:var(--text-mid);text-decoration:none;margin-right:1.2rem}
 footer a:hover{color:var(--gold-light)}
 .crumb{font-size:.68rem;letter-spacing:.16em;text-transform:uppercase;color:var(--text-mid);padding-top:1.4rem}
 .crumb a{text-decoration:none}
+
+
+/* Karte, uebernommen von der Startseite 17.09.2026 */
+.villa-map { height: clamp(280px, 42vw, 440px); margin: 2rem 0 0.9rem; border: 1px solid rgba(184,148,63,0.28); filter: grayscale(0.35) contrast(1.05); }
+.villa-map .leaflet-control-attribution { font-size: 9px; background: rgba(255,255,255,0.75); }
+.villa-marker { width: 18px; height: 18px; border-radius: 50%; background: var(--gold); box-shadow: 0 0 0 5px rgba(184,148,63,0.28), 0 1px 6px rgba(0,0,0,0.45); }
+.coords { font-size: 0.68rem; letter-spacing: 0.18em; text-transform: uppercase; color: var(--text-mid); margin: 0; }
