@@ -513,7 +513,8 @@
   /* --- v93: Sticky-CTA-Leiste --- */
   .sticky-cta { position: fixed; left: 0; right: 0; bottom: var(--cb-h, 0px); z-index: 150; display: flex; align-items: center; justify-content: space-between; gap: 1rem; padding: 0.85rem clamp(1.25rem, 5vw, 3rem) calc(0.85rem + env(safe-area-inset-bottom, 0px)); background: rgba(15,14,12,0.94); backdrop-filter: blur(10px); border-top: 1px solid rgba(184,148,63,0.28); transform: translateY(calc(100% + var(--cb-h, 0px) + env(safe-area-inset-bottom, 0px) + 14px)); transition: transform 0.45s cubic-bezier(0.22,1,0.36,1); }
   .sticky-cta.visible { transform: translateY(0); }
-  .sticky-cta-text { font-size: 0.72rem; letter-spacing: 0.11em; text-transform: uppercase; color: var(--text-light); margin: 0; }
+  .sticky-cta-text { font-size: 0; letter-spacing: 0.11em; text-transform: uppercase; color: var(--text-light); margin: 0; }
+  .sticky-cta-text b { font-size: 0.72rem; }
   .sticky-cta-text b { color: var(--gold-light); font-weight: 400; }
   .sticky-cta .btn { padding: 0.7rem 1.5rem; font-size: 0.68rem; white-space: nowrap; }
   @media (max-width: 640px) { .sticky-cta-text { display: none; } .sticky-cta { justify-content: stretch; } .sticky-cta .btn { width: 100%; text-align: center; } }
@@ -615,13 +616,6 @@
     .cookie-text { font-size: 11px; line-height: 1.45; }
     .cookie-btn { font-size: 9px; padding: 8px 14px; }
   }
-  @media (max-width: 640px) {
-    .sticky-cta { justify-content: space-between; gap: 0.8rem; }
-    .sticky-cta-text { display: block; font-size: 0; }
-    .sticky-cta-text b { font-size: 0.68rem; letter-spacing: 0.1em; }
-    .sticky-cta-text span { display: none; }
-    .sticky-cta .btn { padding: 0.7rem 1.1rem; font-size: 0.62rem; }
-  }
 </style>
 <!-- Google tag (gtag.js) -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-JM8MX1LTEF"></script>
@@ -679,7 +673,7 @@
 </header>
 
 <div class="sticky-cta" id="stickyCta" role="complementary">
-  <p class="sticky-cta-text"><b data-i18n="stickyPrice">Whole property</b> &nbsp;·&nbsp; <span data-i18n="stickyAvail">available from 1 November 2026</span></p>
+  <p class="sticky-cta-text"><b data-i18n="stickyPrice">Available from 1 November 2026</b> &nbsp;·&nbsp; <span data-i18n="stickyAvail"></span></p>
   <a href="#stay" class="btn solid" data-i18n="ctaBandBtn">Check availability</a>
 </div>
 
@@ -1248,8 +1242,8 @@
       ctaBand2:'Pictures only go so far. The silence you have to hear yourself.',
       ctaBand3:'Ninety minutes from the airport. A world away from everything else.',
       ctaBandBtn:'Check availability',
-      stickyPrice:'Whole property',
-      stickyAvail:'available from 1 November 2026',
+      stickyPrice:'Available from 1 November 2026',
+      stickyAvail:'',
       quote:"Not a resort. Not a hotel. A private home at the edge of the Indian Ocean — for those who know the difference.", awardText:"Zanzibar — Africa's Leading Beach Destination 2026, World Travel Awards",
       arcMorning:"Morning", arcMidday:"Midday", arcEvening:"Evening",
       morningEyebrow:"Morning", morningTitle:"The villa wakes slowly",
@@ -1310,8 +1304,8 @@
       ctaBand2:'Bilder zeigen vieles. Die Stille müssen Sie selbst hören.',
       ctaBand3:'Neunzig Minuten vom Flughafen. Und weit weg von allem anderen.',
       ctaBandBtn:'Verfügbarkeit prüfen',
-      stickyPrice:'Das ganze Anwesen',
-      stickyAvail:'verfügbar ab 1. November 2026',
+      stickyPrice:'Verfügbar ab 1. November 2026',
+      stickyAvail:'',
       quote:"Kein Resort. Kein Hotel. Ein privates Zuhause am Rand des Indischen Ozeans — für jene, die den Unterschied kennen.", awardText:"Sansibar — Africa's Leading Beach Destination 2026, World Travel Awards",
       arcMorning:"Morgen", arcMidday:"Mittag", arcEvening:"Abend",
       morningEyebrow:"Morgen", morningTitle:"Die Villa erwacht langsam",
@@ -1372,8 +1366,8 @@
       ctaBand2:'Les images ont leurs limites. Le silence, il faut l\'entendre soi-même.',
       ctaBand3:'À quatre-vingt-dix minutes de l\'aéroport. À un monde de tout le reste.',
       ctaBandBtn:'Vérifier les disponibilités',
-      stickyPrice:'Propriété entière',
-      stickyAvail:'disponible dès le 1er novembre 2026',
+      stickyPrice:'Disponible dès le 1er novembre 2026',
+      stickyAvail:'',
       quote:"Ni un complexe. Ni un hôtel. Une maison privée au bord de l'océan Indien — pour ceux qui savent faire la différence.", awardText:"Zanzibar — Africa's Leading Beach Destination 2026, World Travel Awards",
       arcMorning:"Matin", arcMidday:"Midi", arcEvening:"Soir",
       morningEyebrow:"Matin", morningTitle:"La villa s'éveille lentement",
@@ -1434,8 +1428,8 @@
       ctaBand2:'Le immagini arrivano fino a un certo punto. Il silenzio va ascoltato.',
       ctaBand3:'Novanta minuti dall\'aeroporto. Un mondo lontano da tutto il resto.',
       ctaBandBtn:'Verifica disponibilità',
-      stickyPrice:'Tutta la proprietà',
-      stickyAvail:'disponibile dal 1° novembre 2026',
+      stickyPrice:'Disponibile dal 1° novembre 2026',
+      stickyAvail:'',
       quote:"Non un resort. Non un hotel. Una casa privata sul bordo dell'Oceano Indiano — per chi conosce la differenza.", awardText:"Zanzibar — Africa's Leading Beach Destination 2026, World Travel Awards",
       arcMorning:"Mattina", arcMidday:"Mezzogiorno", arcEvening:"Sera",
       morningEyebrow:"Mattina", morningTitle:"La villa si risveglia lentamente",
@@ -1496,8 +1490,8 @@
       ctaBand2:'Las imágenes llegan hasta cierto punto. El silencio hay que escucharlo.',
       ctaBand3:'A noventa minutos del aeropuerto. A un mundo de todo lo demás.',
       ctaBandBtn:'Ver disponibilidad',
-      stickyPrice:'Propiedad entera',
-      stickyAvail:'disponible desde el 1 de noviembre de 2026',
+      stickyPrice:'Disponible desde el 1 de noviembre de 2026',
+      stickyAvail:'',
       quote:"Ni un resort. Ni un hotel. Una casa privada al borde del Océano Índico — para quienes saben apreciar la diferencia.", awardText:"Zanzíbar — Africa's Leading Beach Destination 2026, World Travel Awards",
       arcMorning:"Mañana", arcMidday:"Mediodía", arcEvening:"Noche",
       morningEyebrow:"Mañana", morningTitle:"La villa despierta lentamente",
