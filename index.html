@@ -653,7 +653,6 @@
 </script>
 <!-- Ende Meta Pixel (noscript-Fallback bewusst weggelassen: nur eine Stelle zu pflegen) -->
 <link rel="preload" as="image" href="img/zuri-cliff-clifftop-timber-deck-aerial-zanzibar.webp" fetchpriority="high">
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.min.css" />
 </head>
 <body>
 
@@ -719,10 +718,7 @@
     <div class="rule reveal"></div>
     <p class="quote reveal" data-i18n="quote">Not a resort. Not a hotel. A private home at the edge of the Indian Ocean — for those who know the difference.</p>
     <p class="quote-attr reveal">Zuri Cliff · Zanzibar</p>
-    <div class="award-badge reveal">
-      <svg viewBox="0 0 100 100" width="26" height="26" fill="none" stroke="currentColor" stroke-width="6" stroke-linejoin="round"><path d="M34 18 H66 V28 C66 42 59 52 50 52 C41 52 34 42 34 28 Z"/><path d="M34 21 H24 C24 32 29 39 35 40"/><path d="M66 21 H76 C76 32 71 39 65 40"/><line x1="50" y1="52" x2="50" y2="70"/><line x1="38" y1="70" x2="62" y2="70"/><line x1="34" y1="82" x2="66" y2="82"/><line x1="38" y1="70" x2="34" y2="82"/><line x1="62" y1="70" x2="66" y2="82"/></svg>
-      <span data-i18n="awardText">Zanzibar — Africa's Leading Beach Destination 2026, World Travel Awards</span>
-    </div>
+    
   </div>
 </section>
 
@@ -954,7 +950,6 @@
       <p class="coords">Unguja South · Tanzania</p>
       <a class="stay-note" href="https://maps.app.goo.gl/gAmXGBVcVYVn2xt47" target="_blank" rel="noopener" style="display:inline-block; margin-top:0.8rem;" data-i18n="directionsLink">Get directions on Google Maps →</a>
     </div>
-    <div class="villa-map reveal" id="villaMap" aria-label="Map showing Zuri Cliff location"></div>
   </div>
 
   <p class="deep-link" style="text-align:center;margin:3rem auto 0;font-family:var(--body);letter-spacing:.14em;text-transform:uppercase;font-size:.72rem"><a href="/makunduchi/" data-i18n="deepLocation" style="color:var(--gold-light);text-decoration:none;border-bottom:1px solid var(--gold-light);padding-bottom:3px">Makunduchi and the south coast</a></p>
@@ -1919,21 +1914,7 @@
   });
 </script>
 
-<script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.min.js"></script>
-<script>
-  (function () {
-    var el = document.getElementById('villaMap');
-    if (!el || typeof L === 'undefined') return;
-    var lat = -6.3768385, lng = 39.5750559;
-    var map = L.map(el, { scrollWheelZoom: false, zoomControl: true }).setView([lat, lng], 14);
-    L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
-      attribution: '&copy; OpenStreetMap contributors',
-      maxZoom: 19
-    }).addTo(map);
-    var icon = L.divIcon({ className: 'villa-marker', iconSize: [18, 18] });
-    L.marker([lat, lng], { icon: icon }).addTo(map).bindPopup('Zuri Cliff');
-  })();
-</script>
+
 <div class="lightbox" id="lightbox" onclick="if(event.target.id==='lightbox') closeLightbox();">
   <button type="button" class="lightbox-close" onclick="closeLightbox()" aria-label="Close">&times;</button>
   <button type="button" class="lightbox-nav lightbox-prev" onclick="navLightbox(-1)" aria-label="Previous image">&#8249;</button>
