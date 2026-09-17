@@ -27,6 +27,7 @@
 {"@type":"Question","name":"Where do you go out for dinner near Zuri Cliff?","acceptedAnswer":{"@type":"Answer","text":"Jambiani is twelve minutes away and Paje nineteen. Both have a good spread of restaurants, from fresh fish and seafood to Italian and international kitchens."}},
 {"@type":"Question","name":"How far is Stone Town from the villa?","acceptedAnswer":{"@type":"Answer","text":"About an hour and a half. It is worth a full day, ideally combined with a spice farm."}}]}
 </script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.min.css" />
 </head>
 <body>
 <header class="top"><div class="wrap">
@@ -47,6 +48,13 @@
 <p class="lead">Zanzibar has four very different coasts, and most visitors only ever see one of them. Zuri Cliff sits on the southern one &mdash; the end of the island where the road traffic thins out, the beach bars stop and the coastline turns to rock and cliff.</p>
 </section>
 <section class="wrap">
+      <h2>Where the villa sits</h2>
+      <p>Shungi Kajengwa, on the cliff edge east of Makunduchi village, at the south-east corner of Unguja. Ninety minutes by road from the airport.</p>
+      <div class="villa-map" id="villaMap" aria-label="Map showing the location of Zuri Cliff"></div>
+      <p class="coords">6&deg;22&prime;36&Prime;&nbsp;S &middot; 39&deg;34&prime;30&Prime;&nbsp;E</p>
+    </section>
+
+    <section class="wrap">
 <h2>The island in four parts</h2>
 <p>The north, around Nungwi and Kendwa, is the lively end: swimmable all day regardless of the tide, and busy with it. The east coast, Paje and Jambiani, is the kitesurfing coast, where the tide sets the rhythm of the day and the water walks a long way out. Stone Town sits on the west, an easy day out and a real one. The south, where the villa is, stays quiet &mdash; not because it is remote, but because nothing was ever built here at scale.</p>
 <figure>
@@ -99,5 +107,19 @@
 <a href="/">Home</a><a href="/villa/">Villa</a><a href="/makunduchi/">Location</a><a href="/rates/">Rates</a><a href="/getting-here/">Getting here</a>
 <p style="margin-top:1.2rem">Zuri Cliff &middot; Makunduchi, South Zanzibar &middot; Adults only 18+</p>
 </div></footer>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.min.js"></script>
+<script>
+(function () {
+  var el = document.getElementById('villaMap');
+  if (!el || typeof L === 'undefined') return;
+  var lat = -6.3768385, lng = 39.5750559;
+  var map = L.map(el, { scrollWheelZoom: false, zoomControl: true }).setView([lat, lng], 13);
+  L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+    attribution: '&copy; OpenStreetMap contributors', maxZoom: 18
+  }).addTo(map);
+  var icon = L.divIcon({ className: 'villa-marker', iconSize: [18, 18] });
+  L.marker([lat, lng], { icon: icon }).addTo(map);
+})();
+</script>
 </body>
 </html>
