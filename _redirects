@@ -8,7 +8,7 @@
 /buchen   /#stay    301
 /buchen/  /#stay    301
 
-# Preisseite entfernt (Entscheid Roger 25.09.2026 / 17.09.2026): keine Preise auf der Website.
+# Preisseite entfernt (Entscheide 25.09.2026 / 17.09.2026): keine Preise auf der Website.
 # Force-Flag, damit der Redirect greift, auch wenn unter diesem Pfad noch eine Datei liegt.
 /rates    /#stay    301!
 /rates/   /#stay    301!
