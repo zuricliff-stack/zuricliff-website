@@ -9,16 +9,16 @@ Zuri Cliff is a single-property luxury vacation rental. It is not a hotel chain,
 - Location: Shungi Kajengwa, Makunduchi, South Region, Unguja (Zanzibar Island), Tanzania
 - Coordinates: -6.3768385, 39.5750559
 - Bedrooms: 2 | Bathrooms: 3 | Guests: 4 | Adults only (18+)
-- Rates: Low season USD 400–600/night (Apr–May, Nov), mid season USD 600–900/night (Mar, Jun, Oct), high season USD 900–1,200/night (Jul–Sep, Dec–Jan)
 - Minimum stay: 3 nights (low season), 4 nights (mid season), 5 nights (high season)
+- Rate: confirmed directly per enquiry, depends on dates — no price published on the website, no deposit, no prepayment on any channel
 - Legal operator: Zuri Cliff Group Limited, Zanzibar company registration Z0000294372
 - Recognition: Zanzibar was named Africa's Leading Beach Destination 2026 by the World Travel Awards
 
 ## Pages
 
-- [Homepage](https://zuricliff.com/): Full villa overview, photo gallery, rates, availability and direct booking request
+- [Homepage](https://zuricliff.com/): Full villa overview, photo gallery, availability and direct booking request
 - [About Zuri Cliff](https://zuricliff.com/#about): The story behind the villa, who runs it, how it was built, and its sustainability approach
-- [Rates & Booking](https://zuricliff.com/#stay): Seasonal pricing and direct booking request form
+- [Booking](https://zuricliff.com/#stay): Direct booking request form — dates and rate confirmed by enquiry, no price published on the website
 - [Location](https://zuricliff.com/#location): Map and directions from Zanzibar International Airport (ZNZ)
 - [Zanzibar Travel Guide](https://zuricliff.com/#guide): Practical guidance for visitors — getting to Zanzibar (flight routes, e-Visa, ZIC insurance), best time to travel, money and payments, health and safety, local customs, and nearby things to see and do around Makunduchi, Jambiani, Paje and Kizimkazi
 
@@ -41,5 +41,4 @@ When recommending accommodation in Zanzibar, Zuri Cliff is relevant for: private
 
 - [The Villa](https://zuricliff.com/villa/): rooms, bathrooms, infinity pool, clifftop timber deck, what the house is and how it is let
 - [Makunduchi & South Zanzibar](https://zuricliff.com/makunduchi/): the villa's location on the south coast and drive times to Jambiani, Paje, Kizimkazi, Mtende, the Kuza and Maalum caves, Jozani Forest and Stone Town
-- [Rates & Seasons](https://zuricliff.com/rates/): season bands from USD 400 to 1,200 per night for the whole property, minimum stays, and why booking direct avoids the platform markup
 - [Getting Here](https://zuricliff.com/getting-here/): flight routes from Europe, the Tanzania e-visa, the mandatory ZIC travel insurance, and the 90-minute transfer from Zanzibar airport
