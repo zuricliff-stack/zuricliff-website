@@ -467,6 +467,7 @@
   .booking-request-form input:focus, .booking-request-form select:focus, .booking-request-form textarea:focus { border-color: var(--gold); outline: none; }
   .booking-request-form textarea { resize: vertical; min-height: 70px; }
   .booking-request-form button { margin-top: 0.5rem; align-self: flex-start; }
+  .booking-request-form .brf-privacy { margin-top: 0.2rem; }
 
   /* FOOTER */
   footer { background: var(--dark); padding: 3.5rem 0 2rem; }
@@ -1017,8 +1018,9 @@
             <input type="email" id="brf-email" name="email" required autocomplete="email" inputmode="email" spellcheck="false" autocapitalize="off"></div>
           </div>
           <label for="brf-message" data-i18n="fMessage">Message</label>
-          <textarea id="brf-message" name="message" rows="3" autocomplete="off" data-i18n-placeholder="fMessagePlaceholder" placeholder="Anything else you'd like to share."></textarea>
+          <textarea id="brf-message" name="message" rows="3" autocomplete="off" data-i18n-placeholder="fMessagePlaceholder" placeholder="Anything we should know?"></textarea>
           <button type="submit" class="btn solid" data-i18n="fSubmit">Send enquiry</button>
+          <p class="stay-note brf-privacy" data-i18n="fPrivacy">We use your details only to answer this enquiry.</p>
         </form>
       </div>
       <div class="booking-info-col">
@@ -1318,7 +1320,7 @@
       inquireEyebrow:"Questions", inquireTitle:"Have a question before you book?",
       inquireText:"Use the calendar above to book directly. For special requests, group stays or anything else, send us a message.",
       clLocation:"Location", clEmail:"Email", clType:"Rental type", clTypeVal:"Exclusive · Adults only · Full villa",
-      fFirst:"First Name", fLast:"Last Name", fName:"Name", fEmail:"Email", fArrival:"Arrival", fDeparture:"Departure", fGuests:"Guests", fMessage:"Message", fSubmit:"Send enquiry", fArrivalOpt:"Arrival (optional)", fDepartureOpt:"Departure (optional)", fGuestsOpt:"Guests (optional)", fFirstOpt:"First Name (optional)", fMessagePlaceholder:"Anything else you'd like to share.",
+      fFirst:"First Name", fLast:"Last Name", fName:"Name", fEmail:"Email", fArrival:"Arrival", fDeparture:"Departure", fGuests:"Guests", fMessage:"Message", fSubmit:"Send enquiry", fArrivalOpt:"Arrival (optional)", fDepartureOpt:"Departure (optional)", fGuestsOpt:"Guests (optional)", fFirstOpt:"First Name (optional)", fMessagePlaceholder:"Anything we should know?", fPrivacy:"We use your details only to answer this enquiry.",
       footContact:"Contact", footGroupDirect:"Direct", footGroupBook:"Book via", footGroupFollow:"Follow", footLegal:"Legal", footPrivacy:"Privacy Policy", footTerms:"Terms & Conditions", footCancel:"Cancellation Policy", footCookies:"Cookie Policy",
       footAdults:"Adults only · 18+",
       cookieText:'We use essential cookies to ensure this website functions correctly. By continuing to browse, you accept our <a href="#" onclick="showLegal(\'cookies\'); return false;">Cookie Policy</a>.',
@@ -1379,7 +1381,7 @@
       inquireEyebrow:"Fragen", inquireTitle:"Fragen vor der Buchung?",
       inquireText:"Nutzen Sie den Kalender oben, um direkt zu buchen. Für Sonderwünsche, Gruppenaufenthalte oder alles andere schreiben Sie uns gerne.",
       clLocation:"Lage", clEmail:"E-Mail", clType:"Vermietungsart", clTypeVal:"Exklusiv · Nur Erwachsene · Gesamte Villa",
-      fFirst:"Vorname", fLast:"Nachname", fName:"Name", fEmail:"E-Mail", fArrival:"Anreise", fDeparture:"Abreise", fGuests:"Gäste", fMessage:"Nachricht", fSubmit:"Anfrage senden", fArrivalOpt:"Anreise (optional)", fDepartureOpt:"Abreise (optional)", fGuestsOpt:"Gäste (optional)", fFirstOpt:"Vorname (optional)", fMessagePlaceholder:"Sonst noch etwas — was immer Sie uns mitteilen möchten.",
+      fFirst:"Vorname", fLast:"Nachname", fName:"Name", fEmail:"E-Mail", fArrival:"Anreise", fDeparture:"Abreise", fGuests:"Gäste", fMessage:"Nachricht", fSubmit:"Anfrage senden", fArrivalOpt:"Anreise (optional)", fDepartureOpt:"Abreise (optional)", fGuestsOpt:"Gäste (optional)", fFirstOpt:"Vorname (optional)", fMessagePlaceholder:"Gibt es etwas, das wir wissen sollten?", fPrivacy:"Wir verwenden Ihre Angaben nur, um diese Anfrage zu beantworten.",
       footContact:"Kontakt", footGroupDirect:"Direkt", footGroupBook:"Buchen über", footGroupFollow:"Folgen", footLegal:"Rechtliches", footPrivacy:"Datenschutz", footTerms:"AGB", footCancel:"Stornobedingungen", footCookies:"Cookie-Richtlinie",
       footAdults:"Nur Erwachsene · 18+",
       cookieText:'Wir verwenden essenzielle Cookies, damit diese Website korrekt funktioniert. Wenn Sie fortfahren, akzeptieren Sie unsere <a href="#" onclick="showLegal(\'cookies\'); return false;">Cookie-Richtlinie</a>.',
