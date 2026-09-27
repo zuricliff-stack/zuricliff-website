@@ -66,9 +66,26 @@ footer a:hover{color:var(--gold-light)}
     .lang-switch button { background: none; border: 0; padding: 0; cursor: pointer; font-family: inherit; font-size: 0.66rem; letter-spacing: 0.12em; text-transform: uppercase; color: rgba(255,255,255,0.45); transition: color 0.3s ease; }
     .lang-switch button:hover, .lang-switch button.active { color: #d8bd77; }
     @media (max-width: 720px) { .lang-switch { margin-left: 0; } }
+/* Burger-Menue wie Startseite, 27.09.2026 */
+.nav-toggle{display:none;background:none;border:0;cursor:pointer;padding:.4rem;flex-direction:column;gap:5px;position:relative;z-index:101;margin-left:auto}
+.nav-toggle span{display:block;width:22px;height:1.5px;background:var(--cream);transition:transform .3s ease,opacity .3s ease}
+@media(max-width:720px){
+header.top{overflow-x:clip}
+header.top .wrap{flex-wrap:nowrap;height:64px;gap:1rem}
+header.top>.wrap>.lang-switch{display:none}
+nav.top-nav{position:fixed;top:0;right:0;height:100svh;width:min(78vw,320px);display:flex;flex-direction:column;flex-wrap:nowrap;align-items:flex-start;justify-content:flex-start;gap:1.4rem;padding:6rem 2rem 2rem;background:rgba(15,14,12,.98);backdrop-filter:blur(8px);z-index:99;transform:translateX(100%);transition:transform .35s ease;overflow-y:auto}
+nav.top-nav.open{transform:translateX(0)}
+nav.top-nav a{margin-left:0;font-size:.9rem}
+nav.top-nav .lang-switch{display:flex;gap:1rem;width:100%;margin:1.8rem 0 0;padding-top:1.5rem;border-top:1px solid rgba(184,148,63,.18)}
+nav.top-nav .lang-switch button{font-size:.78rem}
+.nav-toggle{display:flex}
+.nav-toggle.open span:nth-child(1){transform:translateY(6.5px) rotate(45deg)}
+.nav-toggle.open span:nth-child(2){opacity:0}
+.nav-toggle.open span:nth-child(3){transform:translateY(-6.5px) rotate(-45deg)}
+}
   </style>
 <script type="application/ld+json">
-{"@context":"https://schema.org","@type":"Accommodation","name":"Zuri Cliff","url":"https://zuricliff.com/villa/","numberOfRooms":2,"numberOfBathroomsTotal":3,"occupancy":{"@type":"QuantitativeValue","value":4,"maxValue":4},"numberOfBedrooms":2,"petsAllowed":false,"address":{"@type":"PostalAddress","addressLocality":"Makunduchi","addressRegion":"Unguja South","addressCountry":"TZ"},"amenityFeature":[{"@type":"LocationFeatureSpecification","name":"Private infinity pool","value":true},{"@type":"LocationFeatureSpecification","name":"Air conditioning","value":true},{"@type":"LocationFeatureSpecification","name":"Ocean view","value":true},{"@type":"LocationFeatureSpecification","name":"Private beach access","value":true},{"@type":"LocationFeatureSpecification","name":"Adults only","value":true}],"isPartOf":{"@type":"VacationRental","name":"Zuri Cliff","url":"https://zuricliff.com/"}}
+{"@context":"https://schema.org","@type":"VacationRental","name":"Zuri Cliff","additionalType":"Villa","identifier":"Z0000294372","url":"https://zuricliff.com/villa/","description":"A private cliffside villa above the Indian Ocean in Makunduchi, South Zanzibar. Two ensuite bedrooms, three bathrooms, an infinity pool and a clifftop timber deck. Let only as a whole. Adults only.","latitude":-6.3768385,"longitude":39.5750559,"geo":{"@type":"GeoCoordinates","latitude":-6.3768385,"longitude":39.5750559},"address":{"@type":"PostalAddress","streetAddress":"Shungi Kajengwa","addressLocality":"Makunduchi","addressRegion":"Zanzibar South","addressCountry":"TZ"},"image":["https://zuricliff.com/img/zuri-cliff-private-ocean-villa-infinity-pool-zanzibar.jpg","https://zuricliff.com/img/zuri-cliff-private-ocean-villa-aerial-zanzibar.jpg","https://zuricliff.com/img/zuri-cliff-villa-open-plan-living-dining-ocean.jpg","https://zuricliff.com/img/zuri-cliff-villa-master-bedroom-ocean-view.jpg","https://zuricliff.com/img/zuri-cliff-villa-freestanding-bathtub-ocean-view.jpg","https://zuricliff.com/img/zuri-cliff-villa-dining-room-pendant-lighting.jpg","https://zuricliff.com/img/zuri-cliff-clifftop-timber-deck-aerial-zanzibar.jpg","https://zuricliff.com/img/zuri-cliff-villa-twilight-cliff-zanzibar.jpg"],"checkinTime":"14:00:00+03:00","checkoutTime":"11:00:00+03:00","knowsLanguage":["en","de","fr","it"],"containsPlace":{"@type":"Accommodation","additionalType":"EntirePlace","name":"Zuri Cliff Villa","occupancy":{"@type":"QuantitativeValue","value":4},"numberOfBedrooms":2,"numberOfBathroomsTotal":3,"numberOfRooms":2,"bed":[{"@type":"BedDetails","numberOfBeds":2,"typeOfBed":"King"}],"petsAllowed":false,"amenityFeature":[{"@type":"LocationFeatureSpecification","name":"ac","value":true},{"@type":"LocationFeatureSpecification","name":"wifi","value":true},{"@type":"LocationFeatureSpecification","name":"internetType","value":"Free"},{"@type":"LocationFeatureSpecification","name":"pool","value":true},{"@type":"LocationFeatureSpecification","name":"poolType","value":"Outdoor"},{"@type":"LocationFeatureSpecification","name":"freeBreakfast","value":true},{"@type":"LocationFeatureSpecification","name":"petsAllowed","value":false},{"@type":"LocationFeatureSpecification","name":"childFriendly","value":false}]}}
 </script>
 <script type="application/ld+json">
 {"@context":"https://schema.org","@type":"VideoObject","name":"Zuri Cliff — Signature Film | Private Cliffside Villa, Zanzibar","description":"Zuri Cliff in motion — a private, adults-only villa on the cliffs of Makunduchi, Zanzibar. Direct ocean access, infinity pool, clifftop timber deck.","thumbnailUrl":"https://i.ytimg.com/vi/EB3p_t0Q5iA/maxresdefault.jpg","uploadDate":"2026-09-03","duration":"PT46S","contentUrl":"https://www.youtube.com/watch?v=EB3p_t0Q5iA","embedUrl":"https://www.youtube.com/embed/EB3p_t0Q5iA","publisher":{"@type":"Organization","name":"Zuri Cliff","url":"https://zuricliff.com/"}}
@@ -90,6 +107,7 @@ footer a:hover{color:var(--gold-light)}
 <a href="/getting-here/" data-i18n="navGetting">Getting here</a>
 <a href="/#stay" data-i18n="navStay">Enquire</a>
 </nav><div class="lang-switch"><button data-lang="en">EN</button><button data-lang="de">DE</button><button data-lang="fr">FR</button><button data-lang="it">IT</button><button data-lang="es">ES</button></div>
+<button type="button" class="nav-toggle" id="navToggle" aria-label="Menu" aria-expanded="false"><span></span><span></span><span></span></button>
 </div></header>
 <div class="wrap"><p class="crumb"><a href="/" data-i18n="crumbHome">Zuri Cliff</a> / <span data-i18n="crumbSelf">The Villa</span></p></div>
 <main>
@@ -248,6 +266,21 @@ var ZC_T = {"en":{"navVilla":"Villa","navLocation":"Location","navRates":"Season
   document.querySelectorAll(".lang-switch button").forEach(function(b){
     b.addEventListener("click", function(){ apply(b.getAttribute("data-lang")); });
   });
+})();
+</script>
+<script>
+/* Burger-Menue wie Startseite, 27.09.2026 */
+(function(){
+  var t=document.getElementById('navToggle'), n=document.querySelector('header.top nav.top-nav');
+  if(!t||!n) return;
+  t.addEventListener('click',function(){ var o=n.classList.toggle('open'); t.classList.toggle('open',o); t.setAttribute('aria-expanded',o?'true':'false'); document.body.style.overflow=o?'hidden':''; });
+  n.querySelectorAll('a').forEach(function(a){ a.addEventListener('click',function(){ n.classList.remove('open'); t.classList.remove('open'); t.setAttribute('aria-expanded','false'); document.body.style.overflow=''; }); });
+  var ls=document.querySelector('header.top .lang-switch'), w=document.querySelector('header.top .wrap');
+  if(!ls||!w) return;
+  var mq=window.matchMedia('(max-width: 720px)');
+  function place(){ if(mq.matches){ if(ls.parentElement!==n) n.appendChild(ls); } else if(ls.parentElement!==w){ w.insertBefore(ls,t); } }
+  place();
+  if(mq.addEventListener){ mq.addEventListener('change',place); } else if(mq.addListener){ mq.addListener(place); }
 })();
 </script>
 </body></html>

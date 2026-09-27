@@ -38,6 +38,7 @@
 <a href="/getting-here/" aria-current="page" data-i18n="g4">Getting here</a>
 <a href="/#stay" data-i18n="g5">Enquire</a>
 </nav><div class="lang-switch"><button data-lang="en">EN</button><button data-lang="de">DE</button><button data-lang="fr">FR</button><button data-lang="it">IT</button><button data-lang="es">ES</button></div>
+<button type="button" class="nav-toggle" id="navToggle" aria-label="Menu" aria-expanded="false"><span></span><span></span><span></span></button>
 </div></header>
 <div class="wrap"><p class="crumb" data-i18n="g6"><a href="/">Zuri Cliff</a> / Getting here</p></div>
 <main>
@@ -125,6 +126,21 @@ var ZC_T = {"en":{"g1":"Villa","g2":"Location","g3":"Seasons","g4":"Getting here
   document.querySelectorAll(".lang-switch button").forEach(function(b){
     b.addEventListener("click", function(){ apply(b.getAttribute("data-lang")); });
   });
+})();
+</script>
+<script>
+/* Burger-Menue wie Startseite, 27.09.2026 */
+(function(){
+  var t=document.getElementById('navToggle'), n=document.querySelector('header.top nav.top-nav');
+  if(!t||!n) return;
+  t.addEventListener('click',function(){ var o=n.classList.toggle('open'); t.classList.toggle('open',o); t.setAttribute('aria-expanded',o?'true':'false'); document.body.style.overflow=o?'hidden':''; });
+  n.querySelectorAll('a').forEach(function(a){ a.addEventListener('click',function(){ n.classList.remove('open'); t.classList.remove('open'); t.setAttribute('aria-expanded','false'); document.body.style.overflow=''; }); });
+  var ls=document.querySelector('header.top .lang-switch'), w=document.querySelector('header.top .wrap');
+  if(!ls||!w) return;
+  var mq=window.matchMedia('(max-width: 720px)');
+  function place(){ if(mq.matches){ if(ls.parentElement!==n) n.appendChild(ls); } else if(ls.parentElement!==w){ w.insertBefore(ls,t); } }
+  place();
+  if(mq.addEventListener){ mq.addEventListener('change',place); } else if(mq.addListener){ mq.addListener(place); }
 })();
 </script>
 </body>
