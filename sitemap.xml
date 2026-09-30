@@ -9,7 +9,7 @@
 
     <image:image>
       <image:loc>https://zuricliff.com/img/zuri-cliff-clifftop-timber-deck-aerial-zanzibar.jpg</image:loc>
-      <image:caption>Aerial view of Zuri Cliff villa and timber deck over the ocean</image:caption>
+      <image:caption>Aerial view of Zuri Cliff villa and timber deck on the cliff</image:caption>
       <image:title>Zuri Cliff — Aerial View, Timber Deck</image:title>
     </image:image>
     <image:image>
@@ -21,16 +21,6 @@
       <image:loc>https://zuricliff.com/img/zuri-cliff-infinity-pool-night-zanzibar.jpg</image:loc>
       <image:caption>Infinity pool at night at Zuri Cliff villa</image:caption>
       <image:title>Zuri Cliff — Infinity Pool at Night</image:title>
-    </image:image>
-    <image:image>
-      <image:loc>https://zuricliff.com/img/zuri-cliff-infinity-pool-adults-only-zanzibar.jpg</image:loc>
-      <image:caption>Couple relaxing in the infinity pool at Zuri Cliff villa</image:caption>
-      <image:title>Zuri Cliff — Infinity Pool, Adults Only</image:title>
-    </image:image>
-    <image:image>
-      <image:loc>https://zuricliff.com/img/zuri-cliff-private-ocean-villa-infinity-pool-zanzibar.jpg</image:loc>
-      <image:caption>Private ocean-view infinity pool at Zuri Cliff villa, Zanzibar</image:caption>
-      <image:title>Zuri Cliff — Private Ocean Villa Infinity Pool</image:title>
     </image:image>
     <image:image>
       <image:loc>https://zuricliff.com/img/zuri-cliff-private-ocean-villa-aerial-zanzibar.jpg</image:loc>
@@ -56,11 +46,6 @@
       <image:loc>https://zuricliff.com/img/zuri-cliff-villa-dining-room-pendant-lighting.jpg</image:loc>
       <image:caption>Dining room with pendant lighting at Zuri Cliff villa</image:caption>
       <image:title>Zuri Cliff — Dining Room</image:title>
-    </image:image>
-    <image:image>
-      <image:loc>https://zuricliff.com/img/zuri-cliff-villa-outdoor-dining-ocean-sunset.jpg</image:loc>
-      <image:caption>Outdoor dining table at sunset overlooking the ocean at Zuri Cliff villa</image:caption>
-      <image:title>Zuri Cliff — Outdoor Dining at Sunset</image:title>
     </image:image>
     <image:image>
       <image:loc>https://zuricliff.com/img/zuri-cliff-villa-outdoor-lounge-courtyard.jpg</image:loc>
