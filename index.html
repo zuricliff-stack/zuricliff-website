@@ -227,6 +227,7 @@
   .hero-video { width: 100%; height: 100%; object-fit: cover; object-position: center 60%; display: block; transform: scale(1); }
   .hero::before { content: ''; position: absolute; inset: 0; z-index: 1; background: linear-gradient(to top, rgba(15,14,12,0.92) 0%, rgba(15,14,12,0.3) 45%, rgba(15,14,12,0.18) 100%); }
   .hero-inner { position: relative; z-index: 2; width: 100%; padding: 0 clamp(1.25rem, 5vw, 3rem) clamp(2.5rem, 7vw, 5rem); }
+  @media (max-width: 900px) { .hero-inner { padding-bottom: calc(clamp(2.5rem, 7vw, 5rem) + var(--cb-h, 0px)); } }
   .hero-inner .eyebrow { color: var(--gold-light); text-shadow: 0 1px 2px rgba(0,0,0,0.95), 0 0 12px rgba(0,0,0,0.8); }
   .hero h1 { font-size: clamp(3rem, 9.5vw, 6.4rem); line-height: 0.95; letter-spacing: 0.06em; text-transform: uppercase; }
   .hero p.tag { font-family: var(--display); font-style: italic; font-weight: 300; font-size: clamp(1.15rem, 2.4vw, 1.5rem); color: var(--text-light); max-width: 32ch; margin: 1.2rem 0 2.2rem; letter-spacing: 0.01em; }
@@ -265,7 +266,7 @@
   .arc-labels span { font-size: 0.64rem; letter-spacing: 0.2em; text-transform: uppercase; color: var(--text-mid); transition: color 0.4s ease, letter-spacing 0.4s ease; }
   .arc-labels span.active { color: var(--gold-light); letter-spacing: 0.26em; }
   @media (max-width: 900px) {
-    .arc-rail { display: none; }
+    .arc-rail { display: none !important; }
     .arc-mobile { position: fixed; top: 0; left: 0; right: 0; height: 2px; z-index: 90; background: rgba(184,148,63,0.15); }
     .arc-mobile-fill { height: 100%; width: 0%; background: var(--gold); transition: width 0.1s linear; }
   }
@@ -1291,7 +1292,7 @@
       wholeVillaNote:"Whole villa &middot; rates on request &middot; price depends on dates &middot; check availability",
       termBreakfast:"Breakfast", termBreakfastVal:"Included every morning", termHousekeeping:"Housekeeping", termHousekeepingVal:"Daily, included &mdash; no cleaning fee", termLaundry:"Laundry", termLaundryVal:"On request, at no charge", termSound:"Sound", termSoundVal:"Sonos throughout the villa", termCheckin:"Check-in", termCheckinVal:"14:00 &middot; self check-in on request for late arrivals", termCheckout:"Check-out", termPayment:"Payment", termPaymentVal:"Through Airbnb or Booking.com", termHouseRules:"House rules", termHouseRulesVal:"Adults only, 18 and over &mdash; the pool is unfenced and the cliff edge open. Smoking outdoors only. No pets, no parties. After ten at night, the quiet belongs to the ocean.",
       inquireEyebrow:"Questions", inquireTitle:"Have a question before you book?",
-      inquireText:"Use the calendar above to book directly. For special requests, group stays or anything else, send us a message.",
+      inquireText:"For special requests or anything else, send us a message.",
       clLocation:"Location", clEmail:"Email", clType:"Rental type", clTypeVal:"Exclusive · Adults only · Full villa",
       fFirst:"First Name", fLast:"Last Name", fName:"Name", fEmail:"Email", fArrival:"Arrival", fDeparture:"Departure", fGuests:"Guests", fMessage:"Message", fSubmit:"Send enquiry", fArrivalOpt:"Arrival (optional)", fDepartureOpt:"Departure (optional)", fGuestsOpt:"Guests (optional)", fFirstOpt:"First Name (optional)", fMessagePlaceholder:"Anything we should know?", fPrivacy:"We use your details only to answer this enquiry.",
       footContact:"Contact", footGroupDirect:"Direct", footGroupBook:"Book via", footGroupFollow:"Follow", footLegal:"Legal", footPrivacy:"Privacy Policy", footTerms:"Terms & Conditions", footCancel:"Cancellation Policy", footCookies:"Cookie Policy",
@@ -1348,7 +1349,7 @@
       wholeVillaNote:"Die ganze Villa &middot; Preise auf Anfrage &middot; Preis je nach Datum &middot; Verfügbarkeit anfragen",
       termBreakfast:"Frühstück", termBreakfastVal:"Jeden Morgen inbegriffen", termHousekeeping:"Raumservice", termHousekeepingVal:"Täglich, inbegriffen &mdash; keine Reinigungsgebühr", termLaundry:"Wäscheservice", termLaundryVal:"Auf Wunsch, inbegriffen", termSound:"Sound", termSoundVal:"Sonos in der ganzen Villa", termCheckin:"Check-in", termCheckinVal:"14:00 &middot; Self-Check-in auf Wunsch bei später Ankunft", termCheckout:"Check-out", termPayment:"Zahlung", termPaymentVal:"Über Airbnb oder Booking.com", termHouseRules:"Hausregeln", termHouseRulesVal:"Nur für Erwachsene ab 18 &mdash; der Pool ist nicht umzäunt, die Klippenkante offen. Rauchen nur im Freien. Keine Haustiere, keine Partys. Nach zehn Uhr abends gehört die Ruhe dem Ozean.",
       inquireEyebrow:"Fragen", inquireTitle:"Fragen vor der Buchung?",
-      inquireText:"Nutzen Sie den Kalender oben, um direkt zu buchen. Für Sonderwünsche, Gruppenaufenthalte oder alles andere schreiben Sie uns gerne.",
+      inquireText:"Für Sonderwünsche oder alles andere schreiben Sie uns gerne.",
       clLocation:"Lage", clEmail:"E-Mail", clType:"Vermietungsart", clTypeVal:"Exklusiv · Nur Erwachsene · Gesamte Villa",
       fFirst:"Vorname", fLast:"Nachname", fName:"Name", fEmail:"E-Mail", fArrival:"Anreise", fDeparture:"Abreise", fGuests:"Gäste", fMessage:"Nachricht", fSubmit:"Anfrage senden", fArrivalOpt:"Anreise (optional)", fDepartureOpt:"Abreise (optional)", fGuestsOpt:"Gäste (optional)", fFirstOpt:"Vorname (optional)", fMessagePlaceholder:"Gibt es etwas, das wir wissen sollten?", fPrivacy:"Wir verwenden Ihre Angaben nur, um diese Anfrage zu beantworten.",
       footContact:"Kontakt", footGroupDirect:"Direkt", footGroupBook:"Buchen über", footGroupFollow:"Folgen", footLegal:"Rechtliches", footPrivacy:"Datenschutz", footTerms:"AGB", footCancel:"Stornobedingungen", footCookies:"Cookie-Richtlinie",
@@ -1400,7 +1401,7 @@
       cancelNote:"Voir nos", cancelLink:"Conditions d'annulation", cancelNote2:"pour les modalités de remboursement.",
       airbnbNote:"Vous préférez réserver via Airbnb ?", airbnbLink:"Voir notre annonce", bookingNote:"Vous préférez réserver via Booking.com ?", bookingLink:"Voir notre annonce", bookingUrl:"https://www.booking.com/hotel/tz/private-ocean-villa-infinity-pool-adults-only.fr.html",
       inquireEyebrow:"Questions", inquireTitle:"Une question avant de réserver ?",
-      inquireText:"Utilisez le calendrier ci-dessus pour réserver directement. Pour toute demande particulière ou séjour de groupe, écrivez-nous.",
+      inquireText:"Pour toute demande particulière ou toute autre question, écrivez-nous.",
       clLocation:"Lieu", clEmail:"E-mail", clType:"Type de location", clTypeVal:"Exclusif · Adultes uniquement · Villa entière",
       fFirst:"Prénom", fLast:"Nom", fEmail:"E-mail", fArrival:"Arrivée", fDeparture:"Départ", fGuests:"Invités", fMessage:"Message", fSubmit:"Envoyer la demande", fArrivalOpt:"Arrivée (facultatif)", fDepartureOpt:"Départ (facultatif)", fGuestsOpt:"Invités (facultatif)", fFirstOpt:"Prénom (facultatif)",
       footContact:"Contact", footGroupDirect:"Direct", footGroupBook:"Réserver via", footGroupFollow:"Suivre", footLegal:"Mentions légales", footPrivacy:"Politique de confidentialité", footTerms:"Conditions générales", footCancel:"Conditions d'annulation", footCookies:"Politique de cookies",
@@ -1452,7 +1453,7 @@
       cancelNote:"Consulta le nostre", cancelLink:"Condizioni di cancellazione", cancelNote2:"per i termini di rimborso.",
       airbnbNote:"Preferisci prenotare tramite Airbnb?", airbnbLink:"Vedi il nostro annuncio", bookingNote:"Preferisci prenotare tramite Booking.com?", bookingLink:"Vedi il nostro annuncio", bookingUrl:"https://www.booking.com/hotel/tz/private-ocean-villa-infinity-pool-adults-only.it.html",
       inquireEyebrow:"Domande", inquireTitle:"Una domanda prima di prenotare?",
-      inquireText:"Usa il calendario qui sopra per prenotare direttamente. Per richieste speciali o soggiorni di gruppo, scrivici pure.",
+      inquireText:"Per richieste speciali o qualsiasi altra domanda, scrivici pure.",
       clLocation:"Posizione", clEmail:"E-mail", clType:"Tipo di affitto", clTypeVal:"Esclusivo · Solo adulti · Villa intera",
       fFirst:"Nome", fLast:"Cognome", fEmail:"E-mail", fArrival:"Arrivo", fDeparture:"Partenza", fGuests:"Ospiti", fMessage:"Messaggio", fSubmit:"Invia richiesta", fArrivalOpt:"Arrivo (facoltativo)", fDepartureOpt:"Partenza (facoltativo)", fGuestsOpt:"Ospiti (facoltativo)", fFirstOpt:"Nome (facoltativo)",
       footContact:"Contatti", footGroupDirect:"Diretto", footGroupBook:"Prenota su", footGroupFollow:"Seguici", footLegal:"Note legali", footPrivacy:"Informativa sulla privacy", footTerms:"Termini e condizioni", footCancel:"Condizioni di cancellazione", footCookies:"Cookie policy",
@@ -1504,7 +1505,7 @@
       cancelNote:"Consulte nuestras", cancelLink:"Condiciones de cancelación", cancelNote2:"para conocer los términos de reembolso.",
       airbnbNote:"¿Prefiere reservar a través de Airbnb?", airbnbLink:"Vea nuestro anuncio", bookingNote:"¿Prefiere reservar a través de Booking.com?", bookingLink:"Vea nuestro anuncio", bookingUrl:"https://www.booking.com/hotel/tz/private-ocean-villa-infinity-pool-adults-only.es.html",
       inquireEyebrow:"Preguntas", inquireTitle:"¿Alguna pregunta antes de reservar?",
-      inquireText:"Use el calendario de arriba para reservar directamente. Para solicitudes especiales o estancias en grupo, escríbanos.",
+      inquireText:"Para solicitudes especiales o cualquier otra consulta, escríbanos.",
       clLocation:"Ubicación", clEmail:"Correo electrónico", clType:"Tipo de alquiler", clTypeVal:"Exclusivo · Solo adultos · Villa completa",
       fFirst:"Nombre", fLast:"Apellido", fEmail:"Correo electrónico", fArrival:"Llegada", fDeparture:"Salida", fGuests:"Huéspedes", fMessage:"Mensaje", fSubmit:"Enviar solicitud", fArrivalOpt:"Llegada (opcional)", fDepartureOpt:"Salida (opcional)", fGuestsOpt:"Huéspedes (opcional)", fFirstOpt:"Nombre (opcional)",
       footContact:"Contacto", footGroupDirect:"Directo", footGroupBook:"Reservar en", footGroupFollow:"Síguenos", footLegal:"Aviso legal", footPrivacy:"Política de privacidad", footTerms:"Términos y condiciones", footCancel:"Política de cancelación", footCookies:"Política de cookies",
