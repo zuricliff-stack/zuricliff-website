@@ -630,31 +630,8 @@
   .guide-fold > summary:hover { background: var(--gold); color: var(--dark); }
   .guide-fold[open] > summary { margin-bottom: 2.4rem; }
 </style>
-<!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-JM8MX1LTEF"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-  gtag('config', 'G-JM8MX1LTEF');
-</script>
-<!-- Meta Pixel -->
-<script>
-  /* ===== HIER DIE PIXEL-ID EINTRAGEN (nur diese eine Zeile) ===== */
-  window.ZC_META_PIXEL_ID = '1103962212198227';
-  /* ============================================================== */
-  (function () {
-    if (!window.ZC_META_PIXEL_ID || !/^\d{10,20}$/.test(window.ZC_META_PIXEL_ID)) return;
-    !function(f,b,e,v,n,t,s){if(f.fbq)return;n=f.fbq=function(){n.callMethod?
-    n.callMethod.apply(n,arguments):n.queue.push(arguments)};if(!f._fbq)f._fbq=n;
-    n.push=n;n.loaded=!0;n.version='2.0';n.queue=[];t=b.createElement(e);t.async=!0;
-    t.src=v;s=b.getElementsByTagName(e)[0];s.parentNode.insertBefore(t,s)}
-    (window,document,'script','https://connect.facebook.net/en_US/fbevents.js');
-    fbq('init', window.ZC_META_PIXEL_ID);
-    fbq('track', 'PageView');
-  })();
-</script>
-<!-- Ende Meta Pixel (noscript-Fallback bewusst weggelassen: nur eine Stelle zu pflegen) -->
+<!-- Einwilligung: GA4 und Meta-Pixel laden erst nach Zustimmung (consent.js) -->
+<script src="/consent.js"></script>
 <link rel="preload" as="image" href="/.netlify/images?url=/img/zuri-cliff-signature-pool-ocean-zanzibar.jpg&amp;w=1600" fetchpriority="high">
 </head>
 <body>
@@ -1126,6 +1103,8 @@
           <li><button class="linklike" onclick="showLegal('terms')" data-i18n="footTerms">Terms &amp; Conditions</button></li>
           <li><button class="linklike" onclick="showLegal('cancellation')" data-i18n="footCancel">Cancellation Policy</button></li>
           <li><button class="linklike" onclick="showLegal('cookies')" data-i18n="footCookies">Cookie Policy</button></li>
+          <li><a class="linklike" href="/imprint/" data-zc-t="imprint">Imprint</a></li>
+          <li><button class="linklike" type="button" data-zc-open data-zc-t="settings">Cookie settings</button></li>
         </ul>
       </div>
     </div>
@@ -1220,25 +1199,21 @@
   <button class="legal-close" onclick="hideLegal('cookies')">✕ Close</button>
   <div class="legal-content">
     <h2>Cookie Policy</h2>
-    <p class="legal-date">Last updated: June 2026</p>
-    <p>This website uses cookies to ensure basic functionality and to understand how visitors use the site.</p>
+    <p class="legal-date">Last updated: October 2026</p>
+    <p>This website uses essential cookies. With your consent it also uses analytics and marketing cookies. Without your consent, no analytics or marketing cookie is set and the services below are not loaded.</p>
     <h2>What Are Cookies</h2>
     <p>Cookies are small text files stored on your device when you visit a website. They help the website remember your preferences and improve your experience.</p>
     <h2>Cookies We Use</h2>
     <ul>
-      <li><strong>Essential cookies:</strong> Required for the website to function. Cannot be disabled.</li>
-      <li><strong>Analytics cookies:</strong> Help us understand how visitors interact with the website. No personally identifiable information is collected.</li>
+      <li><strong>Essential cookies:</strong> Required for the website to function. Cannot be disabled. We store your cookie choice (<code>zc_consent</code>, 12 months) and, in your browser storage, your language choice (<code>zc_lang</code>).</li>
+      <li><strong>Analytics cookies (only with your consent):</strong> Google Analytics 4, provided by Google Ireland Limited, helps us understand how visitors use the website. Cookies: <code>_ga</code>, <code>_ga_JM8MX1LTEF</code>.</li>
+      <li><strong>Marketing cookies (only with your consent):</strong> The Meta Pixel, provided by Meta Platforms Ireland Limited, measures how visitors respond to our advertising on Facebook and Instagram and which actions they take on the website, for example sending an enquiry. Cookie: <code>_fbp</code>.</li>
     </ul>
     <h2>Managing Cookies</h2>
-    <p>You can control and delete cookies through your browser settings. Disabling cookies may affect some functionality of the website.</p>
+    <p>You can accept or decline analytics and marketing cookies in the banner and change your choice at any time under &ldquo;Cookie settings&rdquo; in the footer of every page. If you decline or withdraw your consent, these cookies are deleted. You can also control and delete cookies through your browser settings; disabling cookies may affect some functionality of the website.</p>
     <h2>Contact</h2>
     <p><a href="mailto:info@zuricliff.com">info@zuricliff.com</a></p>
   </div>
-</div>
-
-<div class="cookie-banner" id="cookie-banner">
-  <p class="cookie-text" data-i18n="cookieText">We use essential cookies to ensure this website functions correctly. By continuing to browse, you accept our <a href="#" onclick="showLegal('cookies'); return false;">Cookie Policy</a>.</p>
-  <button class="cookie-btn" onclick="acceptCookies()" data-i18n="cookieAccept">Accept</button>
 </div>
 
 <script>
@@ -1297,9 +1272,7 @@
       clLocation:"Location", clEmail:"Email", clType:"Rental type", clTypeVal:"Adults only · Full villa",
       fFirst:"First Name", fLast:"Last Name", fName:"Name", fEmail:"Email", fArrival:"Arrival", fDeparture:"Departure", fGuests:"Guests", fMessage:"Message", fSubmit:"Send enquiry", fArrivalOpt:"Arrival (optional)", fDepartureOpt:"Departure (optional)", fGuestsOpt:"Guests (optional)", fFirstOpt:"First Name (optional)", fMessagePlaceholder:"Anything we should know?", fPrivacy:"We use your details only to answer this enquiry.",
       footContact:"Contact", footGroupDirect:"Direct", footGroupBook:"Book via", footGroupFollow:"Follow", footLegal:"Legal", footPrivacy:"Privacy Policy", footTerms:"Terms & Conditions", footCancel:"Cancellation Policy", footCookies:"Cookie Policy",
-      footAdults:"Adults only · 18+",
-      cookieText:'We use essential cookies to ensure this website functions correctly. By continuing to browse, you accept our <a href="#" onclick="showLegal(\'cookies\'); return false;">Cookie Policy</a>.',
-      cookieAccept:"Accept"
+      footAdults:"Adults only · 18+"
     },
     de: {
       deepVilla:"Die Villa im Detail", deepLocation:"Makunduchi und die Südküste", deepRates:"Saisons", deepGetting:"Anreise &mdash; Flüge, Visum, der Weg vom Flughafen",
@@ -1354,9 +1327,7 @@
       clLocation:"Lage", clEmail:"E-Mail", clType:"Vermietungsart", clTypeVal:"Nur Erwachsene · Gesamte Villa",
       fFirst:"Vorname", fLast:"Nachname", fName:"Name", fEmail:"E-Mail", fArrival:"Anreise", fDeparture:"Abreise", fGuests:"Gäste", fMessage:"Nachricht", fSubmit:"Anfrage senden", fArrivalOpt:"Anreise (optional)", fDepartureOpt:"Abreise (optional)", fGuestsOpt:"Gäste (optional)", fFirstOpt:"Vorname (optional)", fMessagePlaceholder:"Gibt es etwas, das wir wissen sollten?", fPrivacy:"Wir verwenden Ihre Angaben nur, um diese Anfrage zu beantworten.",
       footContact:"Kontakt", footGroupDirect:"Direkt", footGroupBook:"Buchen über", footGroupFollow:"Folgen", footLegal:"Rechtliches", footPrivacy:"Datenschutz", footTerms:"AGB", footCancel:"Stornobedingungen", footCookies:"Cookie-Richtlinie",
-      footAdults:"Nur Erwachsene · 18+",
-      cookieText:'Wir verwenden essenzielle Cookies, damit diese Website korrekt funktioniert. Wenn Sie fortfahren, akzeptieren Sie unsere <a href="#" onclick="showLegal(\'cookies\'); return false;">Cookie-Richtlinie</a>.',
-      cookieAccept:"Akzeptieren"
+      footAdults:"Nur Erwachsene · 18+"
     },
     fr: {
       deepVilla:"La villa en détail", deepLocation:"Makunduchi et la côte sud", deepRates:"Saisons", deepGetting:"Arriver ici &mdash; vols, visa, le trajet depuis l'aéroport",
@@ -1406,9 +1377,7 @@
       clLocation:"Lieu", clEmail:"E-mail", clType:"Type de location", clTypeVal:"Adultes uniquement · Villa entière",
       fFirst:"Prénom", fLast:"Nom", fEmail:"E-mail", fArrival:"Arrivée", fDeparture:"Départ", fGuests:"Invités", fMessage:"Message", fSubmit:"Envoyer la demande", fArrivalOpt:"Arrivée (facultatif)", fDepartureOpt:"Départ (facultatif)", fGuestsOpt:"Invités (facultatif)", fFirstOpt:"Prénom (facultatif)",
       footContact:"Contact", footGroupDirect:"Direct", footGroupBook:"Réserver via", footGroupFollow:"Suivre", footLegal:"Mentions légales", footPrivacy:"Politique de confidentialité", footTerms:"Conditions générales", footCancel:"Conditions d'annulation", footCookies:"Politique de cookies",
-      footAdults:"Adultes uniquement · 18+",
-      cookieText:'Nous utilisons des cookies essentiels pour garantir le bon fonctionnement de ce site. En continuant à naviguer, vous acceptez notre <a href="#" onclick="showLegal(\'cookies\'); return false;">politique de cookies</a>.',
-      cookieAccept:"Accepter"
+      footAdults:"Adultes uniquement · 18+"
     },
     it: {
       deepVilla:"La villa nel dettaglio", deepLocation:"Makunduchi e la costa sud", deepRates:"Stagioni", deepGetting:"Come arrivare &mdash; voli, visto, il tragitto dall'aeroporto",
@@ -1458,9 +1427,7 @@
       clLocation:"Posizione", clEmail:"E-mail", clType:"Tipo di affitto", clTypeVal:"Solo adulti · Villa intera",
       fFirst:"Nome", fLast:"Cognome", fEmail:"E-mail", fArrival:"Arrivo", fDeparture:"Partenza", fGuests:"Ospiti", fMessage:"Messaggio", fSubmit:"Invia richiesta", fArrivalOpt:"Arrivo (facoltativo)", fDepartureOpt:"Partenza (facoltativo)", fGuestsOpt:"Ospiti (facoltativo)", fFirstOpt:"Nome (facoltativo)",
       footContact:"Contatti", footGroupDirect:"Diretto", footGroupBook:"Prenota su", footGroupFollow:"Seguici", footLegal:"Note legali", footPrivacy:"Informativa sulla privacy", footTerms:"Termini e condizioni", footCancel:"Condizioni di cancellazione", footCookies:"Cookie policy",
-      footAdults:"Solo adulti · 18+",
-      cookieText:'Utilizziamo cookie essenziali per garantire il corretto funzionamento di questo sito. Continuando a navigare, accetti la nostra <a href="#" onclick="showLegal(\'cookies\'); return false;">cookie policy</a>.',
-      cookieAccept:"Accetta"
+      footAdults:"Solo adulti · 18+"
     },
     es: {
       deepVilla:"La villa en detalle", deepLocation:"Makunduchi y la costa sur", deepRates:"Temporadas", deepGetting:"Cómo llegar &mdash; vuelos, visado, el trayecto desde el aeropuerto",
@@ -1510,9 +1477,7 @@
       clLocation:"Ubicación", clEmail:"Correo electrónico", clType:"Tipo de alquiler", clTypeVal:"Solo adultos · Villa completa",
       fFirst:"Nombre", fLast:"Apellido", fEmail:"Correo electrónico", fArrival:"Llegada", fDeparture:"Salida", fGuests:"Huéspedes", fMessage:"Mensaje", fSubmit:"Enviar solicitud", fArrivalOpt:"Llegada (opcional)", fDepartureOpt:"Salida (opcional)", fGuestsOpt:"Huéspedes (opcional)", fFirstOpt:"Nombre (opcional)",
       footContact:"Contacto", footGroupDirect:"Directo", footGroupBook:"Reservar en", footGroupFollow:"Síguenos", footLegal:"Aviso legal", footPrivacy:"Política de privacidad", footTerms:"Términos y condiciones", footCancel:"Política de cancelación", footCookies:"Política de cookies",
-      footAdults:"Solo adultos · 18+",
-      cookieText:'Utilizamos cookies esenciales para garantizar el correcto funcionamiento de este sitio. Si continúa navegando, acepta nuestra <a href="#" onclick="showLegal(\'cookies\'); return false;">política de cookies</a>.',
-      cookieAccept:"Aceptar"
+      footAdults:"Solo adultos · 18+"
     }
   };
 
@@ -1813,22 +1778,6 @@
     });
   })();
 
-  /* ---------- cookie banner ---------- */
-  function getCookie(name) { return document.cookie.split(';').some(c => c.trim().startsWith(name + '=')); }
-  function syncBannerHeight() {
-    const cb = document.getElementById('cookie-banner');
-    const h = (cb && !cb.classList.contains('hidden')) ? cb.offsetHeight : 0;
-    document.documentElement.style.setProperty('--cb-h', h + 'px');
-  }
-  if (getCookie('cookiesAccepted')) { document.getElementById('cookie-banner').classList.add('hidden'); }
-  function acceptCookies() {
-    document.cookie = 'cookiesAccepted=true; path=/; max-age=31536000; SameSite=Lax';
-    document.getElementById('cookie-banner').classList.add('hidden');
-    syncBannerHeight();
-  }
-  syncBannerHeight();
-  window.addEventListener('resize', syncBannerHeight);
-
   /* ---------- legal overlays ---------- */
   function showLegal(page) {
     document.getElementById('legal-' + page).classList.add('active');
@@ -1838,6 +1787,12 @@
     document.getElementById('legal-' + page).classList.remove('active');
     document.body.style.overflow = '';
   }
+  function openLegalFromHash() {
+    var m = location.hash.match(/^#(privacy|terms|cancellation|cookies)$/);
+    if (m && document.getElementById('legal-' + m[1])) showLegal(m[1]);
+  }
+  openLegalFromHash();
+  window.addEventListener('hashchange', openLegalFromHash);
   document.addEventListener('keydown', function (e) {
     if (e.key === 'Escape') {
       document.querySelectorAll('.legal-overlay.active').forEach(function (el) { el.classList.remove('active'); });

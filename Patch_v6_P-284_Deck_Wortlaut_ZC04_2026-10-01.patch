@@ -1,0 +1,147 @@
+diff --git a/index.html b/index.html
+index a9e47b6..ac45e84 100644
+--- a/index.html
++++ b/index.html
+@@ -795,13 +795,13 @@
+         </button>
+       </div>
+       <div class="villa-hero-img reveal">
+-        <picture><source type="image/webp" sizes="(max-width: 860px) 100vw, 50vw" srcset="/.netlify/images?url=/img/zuri-cliff-clifftop-timber-deck-aerial-zanzibar.webp&amp;w=400 400w, /.netlify/images?url=/img/zuri-cliff-clifftop-timber-deck-aerial-zanzibar.webp&amp;w=800 800w, /.netlify/images?url=/img/zuri-cliff-clifftop-timber-deck-aerial-zanzibar.webp&amp;w=1200 1200w, /.netlify/images?url=/img/zuri-cliff-clifftop-timber-deck-aerial-zanzibar.webp&amp;w=1600 1600w"><img class="lb-img" src="img/zuri-cliff-clifftop-timber-deck-aerial-zanzibar.jpg" width="1672" height="884" alt="Aerial view of Zuri Cliff villa and timber deck on the cliff"></picture>
++        <picture><source type="image/webp" sizes="(max-width: 860px) 100vw, 50vw" srcset="/.netlify/images?url=/img/zuri-cliff-clifftop-timber-deck-aerial-zanzibar.webp&amp;w=400 400w, /.netlify/images?url=/img/zuri-cliff-clifftop-timber-deck-aerial-zanzibar.webp&amp;w=800 800w, /.netlify/images?url=/img/zuri-cliff-clifftop-timber-deck-aerial-zanzibar.webp&amp;w=1200 1200w, /.netlify/images?url=/img/zuri-cliff-clifftop-timber-deck-aerial-zanzibar.webp&amp;w=1600 1600w"><img class="lb-img" src="img/zuri-cliff-clifftop-timber-deck-aerial-zanzibar.jpg" width="1672" height="884" alt="Aerial view of Zuri Cliff villa and timber deck over the ocean"></picture>
+       </div>
+     </div>
+ 
+     <ul class="amenities reveal">
+       <li data-i18n-html="amen1"><span data-i18n="amen1t">An infinity pool made for sunset</span><small data-i18n="amen1s">12 × 4 m, cliff-edge</small></li>
+-      <li><span data-i18n="amen2t">Timber underfoot, beach below</span><small data-i18n="amen2s">~220 m², on the cliff</small></li>
++      <li><span data-i18n="amen2t">Timber underfoot, ocean below</span><small data-i18n="amen2s">~220 m², over the water</small></li>
+       <li><span data-i18n="amen3t">Outdoor Lounge, where evenings slow down</span><small data-i18n="amen3s">16 m², for sundowners</small></li>
+       <li><span data-i18n="amen4t">Two ensuite bedrooms, made for rest</span><small data-i18n="amen4s">King 180 × 200</small></li>
+       <li><span data-i18n="amen5t">Air conditioning, quietly cooling</span><small data-i18n="amen5s">In every room</small></li>
+@@ -867,8 +867,8 @@
+       </article>
+       <article class="feature">
+         <span>03</span>
+-        <h3 data-i18n="f3Title">Infinity pool. 220 m² of cliff deck. A few steps to the beach.</h3>
+-        <p data-i18n="f3Text">A twelve-metre pool that ends at the horizon. A timber deck as large as the villa itself, above the beach. And when you want the sand: a few steps down.</p>
++        <h3 data-i18n="f3Title">Infinity pool. 220 m² of deck above the ocean. A few steps to the beach.</h3>
++        <p data-i18n="f3Text">A twelve-metre pool that ends at the horizon. A timber deck as large as the villa itself, above the water. And when you want the sand: a few steps down.</p>
+       </article>
+     </div>
+   </div>
+@@ -1268,7 +1268,7 @@
+       villaP1:"A 238 m² villa on a single plot: two en-suite bedrooms opening onto the pool terrace, and ocean views from both bedrooms, the living room and the kitchen. Adults only.",
+       villaP2:"Warm teak, soft linen, handcrafted lighting and ocean-facing spaces create a residence feeling — refined, private and personal.",
+       amen1t:"An infinity pool made for sunset", amen1s:"12 × 4 m, cliff-edge",
+-      amen2t:"Timber underfoot, beach below", amen2s:"~220 m², on the cliff",
++      amen2t:"Timber underfoot, ocean below", amen2s:"~220 m², over the water",
+       amen3t:"Outdoor Lounge, where evenings slow down", amen3s:"16 m², for sundowners",
+       amen4t:"Two ensuite bedrooms, made for rest", amen4s:"King 180 × 200", twoCouples:"Two equal bedrooms, both opening onto the pool terrace, each with its own bathroom. No second-best room &mdash; the villa carries two couples as easily as one.",
+       amen5t:"Air conditioning, quietly cooling", amen5s:"In every room",
+@@ -1278,7 +1278,7 @@
+       filterLine:"Adults only. Eighteen and over, no exceptions.",
+       f1Title:"The cliff. The ocean. In every room.", f1Text:"Zuri Cliff doesn't sit on the beach. It sits above it — a few steps. From both bedrooms, from the living room, from the kitchen: nothing but ocean. The twelve-metre infinity pool ends where the cliff ends. 220 square metres of timber deck above, the beach below. And your music through Sonos, wherever you are.",
+       f2Title:"The whole villa. Yours alone.", f2Text:"238 square metres, two equal bedrooms, one pool, one deck — and no one else. Zuri Cliff is never let room by room. No neighbours at the pool, no strangers' conversation at breakfast. Yours from the first moment.",
+-      f3Title:"Infinity pool. 220 m² of cliff deck. A few steps to the beach.", f3Text:"A twelve-metre pool that ends at the horizon. A timber deck as large as the villa itself, above the beach. And when you want the sand: a few steps down.",
++      f3Title:"Infinity pool. 220 m² of deck above the ocean. A few steps to the beach.", f3Text:"A twelve-metre pool that ends at the horizon. A timber deck as large as the villa itself, above the water. And when you want the sand: a few steps down.",
+       retreatEyebrow:"Your host", retreatTitle:"Discreet. Personal. There.",
+       retreatText:"Your host runs the villa and is there when you need her — and in the background when you don't. She knows the villa and the island, and the difference between attentive and intrusive. A word is enough, in English, German, French or Italian.",
+       galleryEyebrow:"Gallery", galleryTitle:"The villa in pictures.",
+@@ -1325,7 +1325,7 @@
+       villaP1:"Eine 238 m² grosse Villa auf einem Grundstück: zwei Schlafzimmer mit eigenem Bad zur Poolterrasse hin, Meerblick aus beiden Schlafzimmern, dem Wohnraum und der Küche. Nur für Erwachsene.",
+       villaP2:"Warmes Teak, weiches Leinen, handgefertigte Leuchten und ozeangerichtete Räume schaffen ein Residenz-Gefühl — verfeinert, privat und persönlich.",
+       amen1t:"Ein Infinity-Pool für den Sonnenuntergang", amen1s:"12 × 4 m, an der Klippenkante",
+-      amen2t:"Teakholz unter den Füssen, Strand darunter", amen2s:"~220 m², auf der Klippe",
++      amen2t:"Teakholz unter den Füssen, Ozean darunter", amen2s:"~220 m², über dem Wasser",
+       amen3t:"Outdoor Lounge, wo der Abend langsamer wird", amen3s:"16 m², für den Sundowner",
+       amen4t:"Zwei Ensuite-Schlafzimmer, gemacht zum Ausruhen", amen4s:"King 180 × 200", twoCouples:"Zwei gleichwertige Schlafzimmer, beide zur Poolterrasse, jedes mit eigenem Bad. Kein zweitbestes Zimmer &mdash; die Villa trägt zwei befreundete Paare ebenso leicht wie eines.",
+       amen5t:"Klimaanlage, leise kühlend", amen5s:"In jedem Zimmer",
+@@ -1335,7 +1335,7 @@
+       filterLine:"Nur für Erwachsene. Ab 18, ohne Ausnahme.",
+       f1Title:"Die Klippe. Das Meer. In jedem Raum.", f1Text:"Zuri Cliff liegt nicht am Strand, sondern über ihm — ein paar Stufen. Aus beiden Schlafzimmern, aus dem Wohnraum, aus der Küche: nur Ozean. Der zwölf Meter lange Infinity-Pool endet dort, wo die Klippe endet. 220 Quadratmeter Holzdeck darüber, der Strand darunter. Und Ihre Musik über Sonos, wo Sie gerade sind.",
+       f2Title:"Die ganze Villa. Nur für Sie.", f2Text:"238 Quadratmeter, zwei gleichwertige Schlafzimmer, ein Pool, ein Deck — und niemand sonst. Zuri Cliff wird nie zimmerweise vermietet. Keine Nachbarn am Pool, kein fremdes Gespräch beim Frühstück. Vom ersten Moment an Ihre.",
+-      f3Title:"Infinity-Pool. 220 m² Deck auf der Klippe. Ein paar Stufen zum Strand.", f3Text:"Zwölf Meter Pool, der am Horizont endet. Ein Holzdeck, so gross wie die Villa selbst, über dem Strand. Und wenn Sie den Sand wollen: ein paar Stufen hinunter.",
++      f3Title:"Infinity-Pool. 220 m² Deck über dem Ozean. Ein paar Stufen zum Strand.", f3Text:"Zwölf Meter Pool, der am Horizont endet. Ein Holzdeck, so gross wie die Villa selbst, über dem Wasser. Und wenn Sie den Sand wollen: ein paar Stufen hinunter.",
+       retreatEyebrow:"Ihre Gastgeberin", retreatTitle:"Diskret. Persönlich. Da.",
+       retreatText:"Ihre Gastgeberin führt die Villa und ist da, wenn Sie sie brauchen — und im Hintergrund, wenn nicht. Sie kennt die Villa und die Insel, und den Unterschied zwischen aufmerksam und aufdringlich. Ein Wort genügt, auf Englisch, Deutsch, Französisch oder Italienisch.",
+       galleryEyebrow:"Galerie", galleryTitle:"Die Villa in Bildern.",
+@@ -1382,7 +1382,7 @@
+       villaP1:"Une villa de 238 m² sur un seul terrain : deux chambres avec salle de bain privative ouvrant sur la terrasse de la piscine, vue sur l'océan depuis les deux chambres, le salon et la cuisine. Adultes uniquement.",
+       villaP2:"Teck chaud, lin doux, éclairage artisanal et espaces tournés vers l'océan créent une atmosphère résidentielle — raffinée, privée et personnelle.",
+       amen1t:"Une piscine à débordement pensée pour le coucher du soleil", amen1s:"12 × 4 m, au bord de la falaise",
+-      amen2t:"Le teck sous les pieds, la plage en dessous", amen2s:"~220 m², sur la falaise",
++      amen2t:"Le teck sous les pieds, l'océan en dessous", amen2s:"~220 m², au-dessus de l'eau",
+       amen3t:"Outdoor lounge, là où le soir ralentit", amen3s:"16 m², pour l'apéritif au coucher du soleil",
+       amen4t:"Deux chambres avec salle de bain privée, faites pour se reposer", amen4s:"King 180 × 200", twoCouples:"Deux chambres équivalentes, toutes deux ouvertes sur la terrasse de la piscine, chacune avec sa salle de bain. Aucune chambre au rabais &mdash; la maison accueille deux couples aussi facilement qu’un seul.",
+       amen5t:"Climatisation, discrètement fraîche", amen5s:"Dans chaque pièce",
+@@ -1392,7 +1392,7 @@
+       filterLine:"Réservé aux adultes. Dix-huit ans et plus, sans exception.",
+       f1Title:"La falaise. L'océan. Dans chaque pièce.", f1Text:"Zuri Cliff ne se trouve pas sur la plage. Elle se trouve au-dessus — à quelques marches. Depuis les deux chambres, depuis le salon, depuis la cuisine : rien que l'océan. La piscine à débordement de douze mètres se termine là où finit la falaise. 220 mètres carrés de terrasse en bois au-dessus, la plage en dessous. Et votre musique par Sonos, où que vous soyez.",
+       f2Title:"Toute la villa. Pour vous seul.", f2Text:"238 mètres carrés, deux chambres équivalentes, une piscine, une terrasse — et personne d'autre. Zuri Cliff n'est jamais louée chambre par chambre. Pas de voisins à la piscine, pas de conversation d'inconnus au petit-déjeuner. À vous dès le premier instant.",
+-      f3Title:"Piscine à débordement. 220 m² de terrasse sur la falaise. Quelques marches jusqu'à la plage.", f3Text:"Une piscine de douze mètres qui se termine à l'horizon. Une terrasse en bois aussi grande que la villa elle-même, au-dessus de la plage. Et quand vous voulez le sable : quelques marches plus bas.",
++      f3Title:"Piscine à débordement. 220 m² de terrasse au-dessus de l'océan. Quelques marches jusqu'à la plage.", f3Text:"Une piscine de douze mètres qui se termine à l'horizon. Une terrasse en bois aussi grande que la villa elle-même, au-dessus de l'eau. Et quand vous voulez le sable : quelques marches plus bas.",
+       retreatEyebrow:"Votre hôte", retreatTitle:"Discrète. Personnelle. Présente.",
+       retreatText:"Votre hôte dirige la villa et est présente quand vous avez besoin d'elle — et discrète en retrait quand ce n'est pas le cas. Elle connaît la villa et l'île, ainsi que la différence entre l'attention et l'indiscrétion. Un mot suffit, en anglais, en allemand, en français ou en italien.",
+       galleryEyebrow:"Galerie", galleryTitle:"La villa en images.",
+@@ -1434,7 +1434,7 @@
+       villaP1:"Una villa di 238 m² su un unico terreno: due camere con bagno privato che si aprono sulla terrazza della piscina, vista sull'oceano da entrambe le camere, dal soggiorno e dalla cucina. Solo adulti.",
+       villaP2:"Teak caldo, lino morbido, illuminazione artigianale e spazi affacciati sull'oceano creano un'atmosfera residenziale — raffinata, privata e personale.",
+       amen1t:"Una piscina a sfioro pensata per il tramonto", amen1s:"12 × 4 m, sul bordo della scogliera",
+-      amen2t:"Teak sotto i piedi, la spiaggia sotto di voi", amen2s:"~220 m², sulla scogliera",
++      amen2t:"Teak sotto i piedi, oceano sotto di voi", amen2s:"~220 m², sopra l'acqua",
+       amen3t:"Outdoor lounge, dove la sera rallenta", amen3s:"16 m², per l'aperitivo al tramonto",
+       amen4t:"Due camere con bagno privato, fatte per riposare", amen4s:"King 180 × 200", twoCouples:"Due camere equivalenti, entrambe aperte sulla terrazza della piscina, ciascuna con bagno privato. Nessuna stanza di serie B &mdash; la casa accoglie due coppie con la stessa naturalezza di una.",
+       amen5t:"Aria condizionata, silenziosamente fresca", amen5s:"In ogni stanza",
+@@ -1444,7 +1444,7 @@
+       filterLine:"Solo per adulti. Diciotto anni e oltre, senza eccezioni.",
+       f1Title:"La scogliera. L'oceano. In ogni stanza.", f1Text:"Zuri Cliff non si trova sulla spiaggia. Si trova sopra di essa — pochi gradini più in alto. Da entrambe le camere, dal soggiorno, dalla cucina: solo oceano. La piscina a sfioro di dodici metri termina dove finisce la scogliera. 220 metri quadrati di deck in legno sopra, la spiaggia sotto. E la vostra musica con Sonos, ovunque vi troviate.",
+       f2Title:"Tutta la villa. Solo per voi.", f2Text:"238 metri quadrati, due camere equivalenti, una piscina, un deck — e nessun altro. Zuri Cliff non viene mai affittata stanza per stanza. Nessun vicino in piscina, nessuna conversazione di estranei a colazione. Vostra dal primo momento.",
+-      f3Title:"Piscina a sfioro. 220 m² di deck sulla scogliera. Pochi gradini fino alla spiaggia.", f3Text:"Una piscina di dodici metri che termina all'orizzonte. Un deck in legno grande quanto la villa stessa, sopra la spiaggia. E quando desiderate la sabbia: pochi gradini più in basso.",
++      f3Title:"Piscina a sfioro. 220 m² di deck sopra l'oceano. Pochi gradini fino alla spiaggia.", f3Text:"Una piscina di dodici metri che termina all'orizzonte. Un deck in legno grande quanto la villa stessa, sopra l'acqua. E quando desiderate la sabbia: pochi gradini più in basso.",
+       retreatEyebrow:"La vostra host", retreatTitle:"Discreta. Personale. Presente.",
+       retreatText:"La vostra host gestisce la villa ed è presente quando ne avete bisogno — e resta in disparte quando non serve. Conosce la villa e l'isola, e la differenza tra essere premurosi e invadenti. Basta una parola, in inglese, tedesco, francese o italiano.",
+       galleryEyebrow:"Galleria", galleryTitle:"La villa in immagini.",
+@@ -1486,7 +1486,7 @@
+       villaP1:"Una villa de 238 m² en una sola parcela: dos dormitorios con baño propio que se abren a la terraza de la piscina, vistas al océano desde ambos dormitorios, el salón y la cocina. Solo adultos.",
+       villaP2:"Teca cálida, lino suave, iluminación artesanal y espacios orientados al océano crean una atmósfera residencial — refinada, privada y personal. Un lugar perfecto para celebrar por todo lo alto.",
+       amen1t:"Una piscina infinita pensada para el atardecer", amen1s:"12 × 4 m, al borde del acantilado",
+-      amen2t:"Teca bajo los pies, la playa debajo", amen2s:"~220 m², sobre el acantilado",
++      amen2t:"Teca bajo los pies, océano debajo", amen2s:"~220 m², sobre el agua",
+       amen3t:"Outdoor lounge, donde la tarde se ralentiza", amen3s:"16 m², para el aperitivo al atardecer",
+       amen4t:"Dos dormitorios con baño privado, hechos para descansar", amen4s:"King 180 × 200", twoCouples:"Dos dormitorios equivalentes, ambos abiertos a la terraza de la piscina, cada uno con su baño. Ninguna habitación de segunda &mdash; la casa acoge a dos parejas con la misma facilidad que a una.",
+       amen5t:"Aire acondicionado, silenciosamente fresco", amen5s:"En cada habitación",
+@@ -1496,7 +1496,7 @@
+       filterLine:"Solo para adultos. Dieciocho años o más, sin excepciones.",
+       f1Title:"El acantilado. El océano. En cada habitación.", f1Text:"Zuri Cliff no está en la playa. Está sobre ella — a solo unos escalones. Desde ambos dormitorios, desde la sala de estar, desde la cocina: nada más que océano. La piscina infinita de doce metros termina donde termina el acantilado. 220 metros cuadrados de terraza de madera arriba, la playa abajo. Y su música a través de Sonos, dondequiera que esté.",
+       f2Title:"Toda la villa. Solo para usted.", f2Text:"238 metros cuadrados, dos dormitorios equivalentes, una piscina, una terraza — y nadie más. Zuri Cliff nunca se alquila habitación por habitación. Sin vecinos en la piscina, sin conversaciones de desconocidos en el desayuno. Suya desde el primer momento.",
+-      f3Title:"Piscina infinita. 220 m² de terraza sobre el acantilado. Unos pocos escalones hasta la playa.", f3Text:"Una piscina de doce metros que termina en el horizonte. Una terraza de madera tan grande como la propia villa, sobre la playa. Y cuando quiera arena: unos pocos escalones más abajo.",
++      f3Title:"Piscina infinita. 220 m² de terraza sobre el océano. Unos pocos escalones hasta la playa.", f3Text:"Una piscina de doce metros que termina en el horizonte. Una terraza de madera tan grande como la propia villa, sobre el agua. Y cuando quiera arena: unos pocos escalones más abajo.",
+       retreatEyebrow:"Su anfitriona", retreatTitle:"Discreta. Personal. Presente.",
+       retreatText:"Su anfitriona dirige la villa y está presente cuando la necesita — y discreta en un segundo plano cuando no. Conoce la villa y la isla, y la diferencia entre ser atenta e invasiva. Basta una palabra, en inglés, alemán, francés o italiano.",
+       galleryEyebrow:"Galería", galleryTitle:"La villa en imágenes.",
+diff --git a/makunduchi/index.html b/makunduchi/index.html
+index 6f7bc3e..463853a 100644
+--- a/makunduchi/index.html
++++ b/makunduchi/index.html
+@@ -61,7 +61,7 @@
+ <h2 data-i18n="m13">The island in four parts</h2>
+ <p data-i18n="m14">The north, around Nungwi and Kendwa, is the lively end: swimmable all day regardless of the tide, and busy with it. The east coast, Paje and Jambiani, is the kitesurfing coast, where the tide sets the rhythm of the day and the water walks a long way out. Stone Town sits on the west, an easy day out and a real one. The south, where the villa is, stays quiet &mdash; not because it is remote, but because nothing was ever built here at scale.</p>
+ <figure>
+-<img src="/img/zuri-cliff-aerial-day-diagonal-timber-deck-ocean.jpg" alt="Aerial view of the Zuri Cliff timber deck on the cliff at Makunduchi, South Zanzibar" loading="lazy" width="1600" height="1067">
++<img src="/img/zuri-cliff-aerial-day-diagonal-timber-deck-ocean.jpg" alt="Aerial view of the Zuri Cliff timber deck above the ocean at Makunduchi, South Zanzibar" loading="lazy" width="1600" height="1067">
+ <figcaption data-i18n="m15">The clifftop at Shungi Kajengwa, Makunduchi</figcaption>
+ </figure>
+ 
+diff --git a/sitemap.xml b/sitemap.xml
+index 9369c7c..276f174 100644
+--- a/sitemap.xml
++++ b/sitemap.xml
+@@ -9,7 +9,7 @@
+ 
+     <image:image>
+       <image:loc>https://zuricliff.com/img/zuri-cliff-clifftop-timber-deck-aerial-zanzibar.jpg</image:loc>
+-      <image:caption>Aerial view of Zuri Cliff villa and timber deck on the cliff</image:caption>
++      <image:caption>Aerial view of Zuri Cliff villa and timber deck over the ocean</image:caption>
+       <image:title>Zuri Cliff — Aerial View, Timber Deck</image:title>
+     </image:image>
+     <image:image>
