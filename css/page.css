@@ -71,3 +71,7 @@ nav.top-nav .lang-switch button{font-size:.78rem}
 .nav-toggle.open span:nth-child(2){opacity:0}
 .nav-toggle.open span:nth-child(3){transform:translateY(-6.5px) rotate(-45deg)}
 }
+
+.villa-map{position:relative}
+.map-load{position:absolute;inset:0;width:100%;height:100%;background:var(--warm-black);color:var(--cream);border:0;font-family:var(--body);font-weight:300;letter-spacing:.08em;font-size:.9rem;cursor:pointer;padding:1rem;z-index:500}
+.map-load:hover{color:var(--gold-light)}
