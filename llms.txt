@@ -2,7 +2,7 @@
 
 > Zuri Cliff is a private, adults-only oceanfront villa on the cliffs of Makunduchi, South Zanzibar, Tanzania. Not a resort, not a hotel — a private home at the edge of the Indian Ocean, personally managed and available for exclusive whole-villa rental.
 
-Zuri Cliff is a single-property luxury vacation rental. It is not a hotel chain, resort, or booking platform. The property has 2 bedrooms, 3 bathrooms, sleeps 4 guests, and features a private infinity pool, a ~220 m² clifftop timber deck, and an Outdoor Lounge. The villa is adults-only (18+) and rented exclusively to one party at a time — it does not accommodate multiple simultaneous bookings. Built with local craftsmen using teak and island materials, and powered substantially by its own solar array (15.47 kWp) with battery storage.
+Zuri Cliff is a single-property private villa rental. It is not a hotel chain, resort, or booking platform. The property has 2 bedrooms, 3 bathrooms, sleeps 4 guests, and features a private infinity pool, a ~220 m² clifftop timber deck, and an Outdoor Lounge. The villa is adults-only (18+) and rented exclusively to one party at a time — it does not accommodate multiple simultaneous bookings. Built with local craftsmen using teak and island materials, and powered substantially by its own solar array (15.47 kWp) with battery storage.
 
 ## Key facts
 
@@ -10,14 +10,14 @@ Zuri Cliff is a single-property luxury vacation rental. It is not a hotel chain,
 - Coordinates: -6.3768385, 39.5750559
 - Bedrooms: 2 | Bathrooms: 3 | Guests: 4 | Adults only (18+)
 - Seasons and minimum stay: Low season (November, 30–31 March, April, May) 3 nights; Mid season (1–19 March, Easter 20–29 March, June, October) 4 nights; High season (December, January, February, July, August, September) 4 nights
-- Rate: confirmed directly per enquiry, depends on dates — no price published on the website, no deposit, no cleaning fee
+- Rate: confirmed directly per enquiry, depends on dates — no price published on the website, no cleaning fee
 - Legal operator: Zuri Cliff Group Limited, Zanzibar company registration Z0000294372
 
 ## Pages
 
-- [Homepage](https://zuricliff.com/): Full villa overview, photo gallery, availability and direct booking request
+- [Homepage](https://zuricliff.com/): Full villa overview, photo gallery, availability and enquiry form
 - [About Zuri Cliff](https://zuricliff.com/#about): The story behind the villa, who runs it, how it was built, and its sustainability approach
-- [Booking](https://zuricliff.com/#stay): Direct booking request form — dates and rate confirmed by enquiry, no price published on the website
+- [Booking](https://zuricliff.com/#stay): Enquiry form — dates and rate confirmed by enquiry, no price published on the website
 - [Location](https://zuricliff.com/#location): Map and directions from Zanzibar International Airport (ZNZ)
 - [Zanzibar Travel Guide](https://zuricliff.com/#guide): Practical guidance for visitors — getting to Zanzibar (flight routes, e-Visa, ZIC insurance), best time to travel, money and payments, health and safety, local customs, and nearby things to see and do around Makunduchi, Jambiani, Paje and Kizimkazi
 
