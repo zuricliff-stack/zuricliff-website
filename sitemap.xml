@@ -3,7 +3,7 @@
         xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
   <url>
     <loc>https://zuricliff.com/</loc>
-    <lastmod>2026-08-18</lastmod>
+    <lastmod>2026-10-14</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
 
@@ -95,19 +95,19 @@
   </url>
   <url>
     <loc>https://zuricliff.com/villa/</loc>
-    <lastmod>2026-09-07</lastmod>
+    <lastmod>2026-10-07</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
   </url>
   <url>
     <loc>https://zuricliff.com/makunduchi/</loc>
-    <lastmod>2026-09-07</lastmod>
+    <lastmod>2026-10-07</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://zuricliff.com/getting-here/</loc>
-    <lastmod>2026-09-07</lastmod>
+    <lastmod>2026-10-14</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
