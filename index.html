@@ -1917,5 +1917,26 @@
   if (mq.addEventListener) { mq.addEventListener('change', place); } else if (mq.addListener) { mq.addListener(place); }
 })();
 </script>
+<script>
+/* Sprungziel nach dem Laden sichern (Entscheid Roger 18.10.2026, Social-Pruefung Nr. 2): spaet geladene
+   Bilder und Schriften verschieben den Abschnitt nach dem ersten Sprung; darum nach load erneut anspringen,
+   solange der Besucher nicht selbst scrollt. */
+(function () {
+  var h = location.hash;
+  if (!h || h.length < 2 || /^#(privacy|terms|cancellation|cookies)$/.test(h)) return;
+  var id = decodeURIComponent(h.slice(1)), moved = false;
+  ['wheel', 'touchstart', 'keydown'].forEach(function (e) {
+    window.addEventListener(e, function () { moved = true; }, { once: true, passive: true });
+  });
+  function go() {
+    if (moved) return;
+    var el = document.getElementById(id); if (!el) return;
+    var html = document.documentElement, prev = html.style.scrollBehavior;
+    html.style.scrollBehavior = 'auto'; el.scrollIntoView({ block: 'start' }); html.style.scrollBehavior = prev;
+  }
+  if (document.fonts && document.fonts.ready) document.fonts.ready.then(go);
+  window.addEventListener('load', function () { go(); setTimeout(go, 400); setTimeout(go, 1200); });
+})();
+</script>
 </body>
 </html>
