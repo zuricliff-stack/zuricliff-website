@@ -1,12 +1,13 @@
 # Kurzlinks fuer Social-Bios und Story-Sticker
 # Instagram kodiert # zu %23 — deshalb hash-freie Einstiege
 
-/stay     /#stay    301
-/stay/    /#stay    301
-/book     /#stay    301
-/book/    /#stay    301
-/buchen   /#stay    301
-/buchen/  /#stay    301
+# Bio-Link und Buchungseinstiege landen direkt auf dem Anfrageformular (Entscheid Roger 22.10.2026, v26)
+/stay     /#enquire    301
+/stay/    /#enquire    301
+/book     /#enquire    301
+/book/    /#enquire    301
+/buchen   /#enquire    301
+/buchen/  /#enquire    301
 
 # Preisseite entfernt (Entscheide 25.09.2026 / 17.09.2026): keine Preise auf der Website.
 # Force-Flag, damit der Redirect greift, auch wenn unter diesem Pfad noch eine Datei liegt.
