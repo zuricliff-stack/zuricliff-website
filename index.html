@@ -144,6 +144,7 @@
   }
 
   html { scroll-behavior: smooth; }
+  html.zc-jump { scroll-behavior: auto; } /* Sprungziel in der Adresse: ohne Animation anspringen (v25) */
   @media (prefers-reduced-motion: reduce) {
     html { scroll-behavior: auto; }
     * { animation-duration: 0.001ms !important; animation-iteration-count: 1 !important; transition-duration: 0.001ms !important; }
@@ -632,6 +633,7 @@
 <!-- Einwilligung: GA4 und Meta-Pixel laden erst nach Zustimmung (consent.js) -->
 <script src="/consent.js"></script>
 <link rel="preload" as="image" href="/.netlify/images?url=/img/zuri-cliff-signature-pool-ocean-zanzibar.jpg&amp;w=1600" fetchpriority="high">
+<script>if (location.hash && location.hash.length > 1) document.documentElement.className += ' zc-jump';</script>
 </head>
 <body>
 
@@ -1923,24 +1925,31 @@
 })();
 </script>
 <script>
-/* Sprungziel nach dem Laden sichern (Entscheid Roger 18.10.2026, Social-Pruefung Nr. 2): spaet geladene
-   Bilder und Schriften verschieben den Abschnitt nach dem ersten Sprung; darum nach load erneut anspringen,
-   solange der Besucher nicht selbst scrollt. */
+/* Sprungziel sichern (v25, Entscheid Roger 18.10.2026 Nr. 2, Befehl 22.10.2026). Ersetzt v23.
+   Befund: der Browser fuehrt den ersten Sprung mit scroll-behavior: smooth als Animation ueber die ganze Seite aus;
+   spaet geladene Bilder, Schriften und der Sprachwechsel verschieben den Abschnitt danach noch. Darum: Sprung ohne
+   Animation (Klasse zc-jump), danach bis 6 s nach jeder Groessenaenderung der Seite neu ausrichten, solange der
+   Besucher nicht selbst scrollt (Rad, Wischen, Taste, Klick, Hash-Wechsel). */
 (function () {
-  var h = location.hash;
-  if (!h || h.length < 2 || /^#(privacy|terms|cancellation|cookies)$/.test(h)) return;
-  var id = decodeURIComponent(h.slice(1)), moved = false;
-  ['wheel', 'touchstart', 'keydown'].forEach(function (e) {
-    window.addEventListener(e, function () { moved = true; }, { once: true, passive: true });
-  });
+  var html = document.documentElement, h = location.hash;
+  function done() { html.classList.remove('zc-jump'); if (ro) { ro.disconnect(); ro = null; } if (timer) { clearInterval(timer); timer = null; } }
+  if (!h || h.length < 2 || /^#(privacy|terms|cancellation|cookies)$/.test(h)) { html.classList.remove('zc-jump'); return; }
+  var id = decodeURIComponent(h.slice(1)), moved = false, t0 = Date.now(), timer = null, ro = null;
+  function stop() { moved = true; done(); }
+  ['wheel', 'touchmove', 'keydown', 'hashchange'].forEach(function (e) { window.addEventListener(e, stop, { once: true, passive: true }); });
+  document.addEventListener('click', stop, { once: true, capture: true, passive: true });
   function go() {
     if (moved) return;
     var el = document.getElementById(id); if (!el) return;
-    var html = document.documentElement, prev = html.style.scrollBehavior;
-    html.style.scrollBehavior = 'auto'; el.scrollIntoView({ block: 'start' }); html.style.scrollBehavior = prev;
+    html.classList.add('zc-jump');
+    el.scrollIntoView({ block: 'start' });
   }
+  go();
   if (document.fonts && document.fonts.ready) document.fonts.ready.then(go);
-  window.addEventListener('load', function () { go(); setTimeout(go, 400); setTimeout(go, 1200); });
+  window.addEventListener('load', go);
+  window.addEventListener('pageshow', function (e) { if (e.persisted) go(); });
+  if (window.ResizeObserver) { ro = new ResizeObserver(go); ro.observe(document.body); }
+  timer = setInterval(function () { go(); if (Date.now() - t0 > 6000) done(); }, 250);
 })();
 </script>
 </body>
