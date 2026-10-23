@@ -129,7 +129,7 @@
     var l = document.createElement('link'); l.rel = 'stylesheet'; l.href = '/vendor/leaflet/leaflet.min.css'; document.head.appendChild(l);
     var s = document.createElement('script'); s.src = '/vendor/leaflet/leaflet.min.js'; s.onload = init; document.head.appendChild(s);
   }
-  /* Entscheid Roger 18.10.2026 (Option A): Karte laedt automatisch, wenn im Cookie-Banner zugestimmt wurde
+  /* Entscheid 18.10.2026 (Option A): Karte laedt automatisch, wenn im Cookie-Banner zugestimmt wurde
      (zc_consent = analytics, marketing oder all); sonst bleibt der Knopf. */
   function consented() { var m = document.cookie.match(/(?:^|;\s*)zc_consent=([a-z]+)/); return !!m && m[1] !== 'none'; }
   btn.addEventListener('click', load);
