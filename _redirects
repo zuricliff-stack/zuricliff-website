@@ -1,9 +1,11 @@
 # Kurzlinks fuer Social-Bios und Story-Sticker
 # Instagram kodiert # zu %23 — deshalb hash-freie Einstiege
 
-# Bio-Link und Buchungseinstiege landen direkt auf dem Anfrageformular (Entscheid Roger 22.10.2026, v26)
-/stay     /#enquire    301
-/stay/    /#enquire    301
+# Bio-Link und Story-Sticker landen bei den Buchungsknoepfen Airbnb / Booking.com (Entscheid Roger 31.10.2026, v30; ersetzt v26)
+# Query-Parameter (utm_*) bleiben erhalten: Netlify haengt sie vor dem # an (/?utm_source=...#stay)
+/stay     /#stay    301
+/stay/    /#stay    301
+# Buchungseinstiege /book und /buchen landen weiterhin auf dem Anfrageformular (v26)
 /book     /#enquire    301
 /book/    /#enquire    301
 /buchen   /#enquire    301
