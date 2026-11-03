@@ -3,7 +3,7 @@
         xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
   <url>
     <loc>https://zuricliff.com/</loc>
-    <lastmod>2026-11-03</lastmod>
+    <lastmod>2026-11-04</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
 
@@ -84,8 +84,8 @@
     </image:image>
     <image:image>
       <image:loc>https://zuricliff.com/img/zuri-cliff-villa-sunset-deck-shungi-zanzibar.jpg</image:loc>
-      <image:caption>Couple sharing champagne on the deck at sunset at Zuri Cliff villa</image:caption>
-      <image:title>Zuri Cliff — Sunset on the Deck</image:title>
+      <image:caption>Couple sharing champagne on the wooden deck at Zuri Cliff at dusk, deck lights on and the ocean beyond</image:caption>
+      <image:title>Zuri Cliff — Dusk on the Deck</image:title>
     </image:image>
     <image:image>
       <image:loc>https://zuricliff.com/img/zuri-cliff-villa-twilight-cliff-zanzibar.jpg</image:loc>
@@ -95,13 +95,13 @@
   </url>
   <url>
     <loc>https://zuricliff.com/villa/</loc>
-    <lastmod>2026-10-18</lastmod>
+    <lastmod>2026-11-04</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
   </url>
   <url>
     <loc>https://zuricliff.com/makunduchi/</loc>
-    <lastmod>2026-10-18</lastmod>
+    <lastmod>2026-11-04</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
@@ -113,7 +113,7 @@
   </url>
   <url>
     <loc>https://zuricliff.com/story/</loc>
-    <lastmod>2026-11-01</lastmod>
+    <lastmod>2026-11-04</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
