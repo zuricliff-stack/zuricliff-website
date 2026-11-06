@@ -28,12 +28,12 @@
 <meta name="twitter:title" content="Zuri Cliff · A private villa on the cliff, South Zanzibar">
 <meta name="twitter:description" content="Zuri Cliff is a private villa on the cliff, right on the Indian Ocean, near Makunduchi in the south of Zanzibar. Adults only.">
 
-<link rel="canonical" href="https://zuricliff.com">
+<link rel="canonical" href="https://zuricliff.com/">
 <link rel="alternate" hreflang="en" href="https://zuricliff.com/">
-<link rel="alternate" hreflang="de" href="https://zuricliff.com/">
-<link rel="alternate" hreflang="fr" href="https://zuricliff.com/">
-<link rel="alternate" hreflang="it" href="https://zuricliff.com/">
-<link rel="alternate" hreflang="es" href="https://zuricliff.com/">
+<link rel="alternate" hreflang="de" href="https://zuricliff.com/de/">
+<link rel="alternate" hreflang="fr" href="https://zuricliff.com/fr/">
+<link rel="alternate" hreflang="it" href="https://zuricliff.com/it/">
+<link rel="alternate" hreflang="es" href="https://zuricliff.com/es/">
 <link rel="alternate" hreflang="x-default" href="https://zuricliff.com/">
 <link rel="icon" href="/favicon.ico" sizes="any">
 <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
@@ -201,8 +201,8 @@
   .site-nav nav a { font-size: 0.76rem; letter-spacing: 0.1em; text-transform: uppercase; text-decoration: none; color: var(--text-light); transition: color 0.3s ease; }
   .site-nav nav a:hover { color: var(--gold-light); }
   .lang-switch { display: flex; gap: 0.5rem; }
-  .lang-switch button { background: none; border: none; font-family: var(--body); font-size: 0.7rem; letter-spacing: 0.1em; color: rgba(200,191,176,0.5); cursor: pointer; padding: 0.2rem; }
-  .lang-switch button.active, .lang-switch button:hover { color: var(--gold-light); }
+  .lang-switch a { background: none; border: none; font-family: var(--body); font-size: 0.7rem; letter-spacing: 0.1em; color: rgba(200,191,176,0.5); cursor: pointer; padding: 0.2rem; }
+  .lang-switch a.active, .lang-switch a:hover { color: var(--gold-light); }
   .nav-toggle { display: none; background: none; border: none; cursor: pointer; padding: 0.4rem; flex-direction: column; gap: 5px; position: relative; z-index: 101; }
   .nav-toggle span { display: block; width: 22px; height: 1.5px; background: var(--cream); transition: transform 0.3s ease, opacity 0.3s ease; }
   @media (max-width: 720px) {
@@ -618,7 +618,7 @@
     .hero::before { background: linear-gradient(to top, rgba(15,14,12,0.96) 0%, rgba(15,14,12,0.72) 40%, rgba(15,14,12,0.3) 62%, rgba(15,14,12,0.18) 100%); }
     .site-nav .lang-switch { display: none; }
     .site-nav nav .lang-switch { display: flex; gap: 1rem; width: 100%; margin-top: 1.8rem; padding-top: 1.5rem; border-top: 1px solid rgba(184,148,63,0.18); }
-    .site-nav nav .lang-switch button { font-size: 0.78rem; }
+    .site-nav nav .lang-switch a { font-size: 0.78rem; }
     .cookie-banner { padding: 13px 1.25rem calc(13px + env(safe-area-inset-bottom, 0px)); gap: 14px; flex-wrap: nowrap; align-items: center; }
     .cookie-text { font-size: 11px; line-height: 1.45; }
     .cookie-btn { font-size: 9px; padding: 8px 14px; }
@@ -653,13 +653,7 @@
       <a href="/getting-here/" data-i18n="navGetting">Getting here</a>
       <a href="#stay" class="nav-cta" data-i18n="navStay">Stay</a>
     </nav>
-    <div class="lang-switch">
-      <button type="button" class="active" data-lang="en" onclick="setLang('en')">EN</button>
-      <button type="button" data-lang="de" onclick="setLang('de')">DE</button>
-      <button type="button" data-lang="fr" onclick="setLang('fr')">FR</button>
-      <button type="button" data-lang="it" onclick="setLang('it')">IT</button>
-      <button type="button" data-lang="es" onclick="setLang('es')">ES</button>
-    </div>
+    <div class="lang-switch"><a class="active" data-lang="en" href="/">EN</a><a data-lang="de" href="/de/">DE</a><a data-lang="fr" href="/fr/">FR</a><a data-lang="it" href="/it/">IT</a><a data-lang="es" href="/es/">ES</a></div>
     <button type="button" class="nav-toggle" id="navToggle" aria-label="Menu" aria-expanded="false">
       <span></span><span></span><span></span>
     </button>
@@ -1673,7 +1667,7 @@
 
   function setLang(l, skipSave) {
     currentLang = l;
-    document.querySelectorAll('.lang-switch button').forEach(b => b.classList.toggle('active', b.dataset.lang === l));
+    document.querySelectorAll('.lang-switch a').forEach(b => b.classList.toggle('active', b.dataset.lang === l));
     document.querySelectorAll('[data-i18n]').forEach(el => {
       const k = el.getAttribute('data-i18n');
       if (T[l][k] !== undefined) el.innerHTML = T[l][k];
@@ -1690,17 +1684,21 @@
   }
 
   /* ---------- auto-detect browser language on first visit ---------- */
+  /* v37 (06.11.2026): Sprachfassungen sind eigene URLs (/de/, /fr/, /it/, /es/). Die englische Seite bleibt statisch;
+     gespeicherte oder Browser-Sprache fuehrt beim ersten Aufruf auf die Sprachfassung, Query und Anker bleiben erhalten. */
   (function initLang() {
     let saved = null;
     try { saved = localStorage.getItem('zc_lang'); } catch (e) {}
-    if (saved && supportedLangs.includes(saved)) {
-      setLang(saved, true);
-      return;
+    let want = (saved && supportedLangs.includes(saved)) ? saved : null;
+    if (!want) {
+      const browserLangs = navigator.languages || [navigator.language || 'en'];
+      for (const bl of browserLangs) {
+        const code = (bl || '').slice(0, 2).toLowerCase();
+        if (supportedLangs.includes(code)) { want = code; break; }
+      }
     }
-    const browserLangs = navigator.languages || [navigator.language || 'en'];
-    for (const bl of browserLangs) {
-      const code = (bl || '').slice(0, 2).toLowerCase();
-      if (supportedLangs.includes(code)) { setLang(code, true); return; }
+    if (want && want !== 'en' && !/^\/(de|fr|it|es)\//.test(location.pathname)) {
+      location.replace('/' + want + location.pathname + location.search + location.hash); return;
     }
     setLang('en', true);
   })();
@@ -1987,6 +1985,15 @@
   if (window.ResizeObserver) { ro = new ResizeObserver(go); ro.observe(document.body); }
   timer = setInterval(function () { go(); if (Date.now() - t0 > 6000) done(); }, 250);
 })();
+</script>
+<script>
+/* v37: Sprachwahl merken und Anker/Query mitnehmen */
+document.querySelectorAll('.lang-switch a').forEach(function (a) {
+  a.addEventListener('click', function () {
+    try { localStorage.setItem('zc_lang', a.getAttribute('data-lang')); } catch (e) {}
+    a.href = a.getAttribute('href') + location.search + location.hash;
+  });
+});
 </script>
 </body>
 </html>

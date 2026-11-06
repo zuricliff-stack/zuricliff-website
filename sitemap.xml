@@ -1,8 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
-        xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
+        xmlns:image="http://www.google.com/schemas/sitemap-image/1.1"
+        xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
     <loc>https://zuricliff.com/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://zuricliff.com/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://zuricliff.com/de/"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://zuricliff.com/fr/"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://zuricliff.com/it/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://zuricliff.com/es/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://zuricliff.com/"/>
     <lastmod>2026-11-04</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
@@ -95,26 +102,290 @@
   </url>
   <url>
     <loc>https://zuricliff.com/villa/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://zuricliff.com/villa/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://zuricliff.com/de/villa/"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://zuricliff.com/fr/villa/"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://zuricliff.com/it/villa/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://zuricliff.com/es/villa/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://zuricliff.com/villa/"/>
     <lastmod>2026-11-04</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
   </url>
   <url>
     <loc>https://zuricliff.com/makunduchi/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://zuricliff.com/makunduchi/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://zuricliff.com/de/makunduchi/"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://zuricliff.com/fr/makunduchi/"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://zuricliff.com/it/makunduchi/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://zuricliff.com/es/makunduchi/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://zuricliff.com/makunduchi/"/>
     <lastmod>2026-11-04</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://zuricliff.com/getting-here/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://zuricliff.com/getting-here/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://zuricliff.com/de/getting-here/"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://zuricliff.com/fr/getting-here/"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://zuricliff.com/it/getting-here/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://zuricliff.com/es/getting-here/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://zuricliff.com/getting-here/"/>
     <lastmod>2026-11-02</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://zuricliff.com/story/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://zuricliff.com/story/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://zuricliff.com/de/story/"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://zuricliff.com/fr/story/"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://zuricliff.com/it/story/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://zuricliff.com/es/story/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://zuricliff.com/story/"/>
     <lastmod>2026-11-04</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://zuricliff.com/de/</loc>
+    <lastmod>2026-11-06</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://zuricliff.com/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://zuricliff.com/de/"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://zuricliff.com/fr/"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://zuricliff.com/it/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://zuricliff.com/es/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://zuricliff.com/"/>
+  </url>
+  <url>
+    <loc>https://zuricliff.com/fr/</loc>
+    <lastmod>2026-11-06</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://zuricliff.com/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://zuricliff.com/de/"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://zuricliff.com/fr/"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://zuricliff.com/it/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://zuricliff.com/es/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://zuricliff.com/"/>
+  </url>
+  <url>
+    <loc>https://zuricliff.com/it/</loc>
+    <lastmod>2026-11-06</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://zuricliff.com/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://zuricliff.com/de/"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://zuricliff.com/fr/"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://zuricliff.com/it/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://zuricliff.com/es/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://zuricliff.com/"/>
+  </url>
+  <url>
+    <loc>https://zuricliff.com/es/</loc>
+    <lastmod>2026-11-06</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://zuricliff.com/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://zuricliff.com/de/"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://zuricliff.com/fr/"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://zuricliff.com/it/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://zuricliff.com/es/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://zuricliff.com/"/>
+  </url>
+  <url>
+    <loc>https://zuricliff.com/de/villa/</loc>
+    <lastmod>2026-11-06</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://zuricliff.com/villa/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://zuricliff.com/de/villa/"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://zuricliff.com/fr/villa/"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://zuricliff.com/it/villa/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://zuricliff.com/es/villa/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://zuricliff.com/villa/"/>
+  </url>
+  <url>
+    <loc>https://zuricliff.com/fr/villa/</loc>
+    <lastmod>2026-11-06</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://zuricliff.com/villa/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://zuricliff.com/de/villa/"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://zuricliff.com/fr/villa/"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://zuricliff.com/it/villa/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://zuricliff.com/es/villa/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://zuricliff.com/villa/"/>
+  </url>
+  <url>
+    <loc>https://zuricliff.com/it/villa/</loc>
+    <lastmod>2026-11-06</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://zuricliff.com/villa/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://zuricliff.com/de/villa/"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://zuricliff.com/fr/villa/"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://zuricliff.com/it/villa/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://zuricliff.com/es/villa/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://zuricliff.com/villa/"/>
+  </url>
+  <url>
+    <loc>https://zuricliff.com/es/villa/</loc>
+    <lastmod>2026-11-06</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://zuricliff.com/villa/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://zuricliff.com/de/villa/"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://zuricliff.com/fr/villa/"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://zuricliff.com/it/villa/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://zuricliff.com/es/villa/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://zuricliff.com/villa/"/>
+  </url>
+  <url>
+    <loc>https://zuricliff.com/de/makunduchi/</loc>
+    <lastmod>2026-11-06</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://zuricliff.com/makunduchi/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://zuricliff.com/de/makunduchi/"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://zuricliff.com/fr/makunduchi/"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://zuricliff.com/it/makunduchi/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://zuricliff.com/es/makunduchi/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://zuricliff.com/makunduchi/"/>
+  </url>
+  <url>
+    <loc>https://zuricliff.com/fr/makunduchi/</loc>
+    <lastmod>2026-11-06</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://zuricliff.com/makunduchi/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://zuricliff.com/de/makunduchi/"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://zuricliff.com/fr/makunduchi/"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://zuricliff.com/it/makunduchi/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://zuricliff.com/es/makunduchi/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://zuricliff.com/makunduchi/"/>
+  </url>
+  <url>
+    <loc>https://zuricliff.com/it/makunduchi/</loc>
+    <lastmod>2026-11-06</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://zuricliff.com/makunduchi/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://zuricliff.com/de/makunduchi/"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://zuricliff.com/fr/makunduchi/"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://zuricliff.com/it/makunduchi/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://zuricliff.com/es/makunduchi/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://zuricliff.com/makunduchi/"/>
+  </url>
+  <url>
+    <loc>https://zuricliff.com/es/makunduchi/</loc>
+    <lastmod>2026-11-06</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://zuricliff.com/makunduchi/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://zuricliff.com/de/makunduchi/"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://zuricliff.com/fr/makunduchi/"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://zuricliff.com/it/makunduchi/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://zuricliff.com/es/makunduchi/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://zuricliff.com/makunduchi/"/>
+  </url>
+  <url>
+    <loc>https://zuricliff.com/de/getting-here/</loc>
+    <lastmod>2026-11-06</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://zuricliff.com/getting-here/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://zuricliff.com/de/getting-here/"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://zuricliff.com/fr/getting-here/"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://zuricliff.com/it/getting-here/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://zuricliff.com/es/getting-here/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://zuricliff.com/getting-here/"/>
+  </url>
+  <url>
+    <loc>https://zuricliff.com/fr/getting-here/</loc>
+    <lastmod>2026-11-06</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://zuricliff.com/getting-here/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://zuricliff.com/de/getting-here/"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://zuricliff.com/fr/getting-here/"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://zuricliff.com/it/getting-here/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://zuricliff.com/es/getting-here/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://zuricliff.com/getting-here/"/>
+  </url>
+  <url>
+    <loc>https://zuricliff.com/it/getting-here/</loc>
+    <lastmod>2026-11-06</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://zuricliff.com/getting-here/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://zuricliff.com/de/getting-here/"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://zuricliff.com/fr/getting-here/"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://zuricliff.com/it/getting-here/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://zuricliff.com/es/getting-here/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://zuricliff.com/getting-here/"/>
+  </url>
+  <url>
+    <loc>https://zuricliff.com/es/getting-here/</loc>
+    <lastmod>2026-11-06</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://zuricliff.com/getting-here/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://zuricliff.com/de/getting-here/"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://zuricliff.com/fr/getting-here/"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://zuricliff.com/it/getting-here/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://zuricliff.com/es/getting-here/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://zuricliff.com/getting-here/"/>
+  </url>
+  <url>
+    <loc>https://zuricliff.com/de/story/</loc>
+    <lastmod>2026-11-06</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://zuricliff.com/story/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://zuricliff.com/de/story/"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://zuricliff.com/fr/story/"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://zuricliff.com/it/story/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://zuricliff.com/es/story/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://zuricliff.com/story/"/>
+  </url>
+  <url>
+    <loc>https://zuricliff.com/fr/story/</loc>
+    <lastmod>2026-11-06</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://zuricliff.com/story/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://zuricliff.com/de/story/"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://zuricliff.com/fr/story/"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://zuricliff.com/it/story/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://zuricliff.com/es/story/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://zuricliff.com/story/"/>
+  </url>
+  <url>
+    <loc>https://zuricliff.com/it/story/</loc>
+    <lastmod>2026-11-06</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://zuricliff.com/story/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://zuricliff.com/de/story/"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://zuricliff.com/fr/story/"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://zuricliff.com/it/story/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://zuricliff.com/es/story/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://zuricliff.com/story/"/>
+  </url>
+  <url>
+    <loc>https://zuricliff.com/es/story/</loc>
+    <lastmod>2026-11-06</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://zuricliff.com/story/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://zuricliff.com/de/story/"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://zuricliff.com/fr/story/"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://zuricliff.com/it/story/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://zuricliff.com/es/story/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://zuricliff.com/story/"/>
   </url>
 </urlset>

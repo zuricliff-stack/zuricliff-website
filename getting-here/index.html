@@ -7,6 +7,12 @@
 <title>Getting to Zanzibar &amp; to the Villa — Flights, E-Visa, Insurance | Zuri Cliff · South Zanzibar</title>
 <meta name="description" content="How to reach Zuri Cliff in Makunduchi: direct and one-stop routes from Milan, Rome, Frankfurt, Paris, Zurich, Madrid, London, Doha, Dubai and Istanbul, the Tanzania e-visa, the mandatory ZIC travel insurance, and the 90-minute drive from Zanzibar airport.">
 <link rel="canonical" href="https://zuricliff.com/getting-here/">
+<link rel="alternate" hreflang="en" href="https://zuricliff.com/getting-here/">
+<link rel="alternate" hreflang="de" href="https://zuricliff.com/de/getting-here/">
+<link rel="alternate" hreflang="fr" href="https://zuricliff.com/fr/getting-here/">
+<link rel="alternate" hreflang="it" href="https://zuricliff.com/it/getting-here/">
+<link rel="alternate" hreflang="es" href="https://zuricliff.com/es/getting-here/">
+<link rel="alternate" hreflang="x-default" href="https://zuricliff.com/getting-here/">
 <meta name="robots" content="index,follow,max-image-preview:large">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Getting to Zuri Cliff — Flights, Visa, Arrival">
@@ -35,7 +41,7 @@
 <a href="/#seasons" data-i18n="g3">Seasons</a>
 <a href="/getting-here/" aria-current="page" data-i18n="g4">Getting here</a>
 <a href="/#stay" data-i18n="g5">Enquire</a>
-</nav><div class="lang-switch"><button data-lang="en">EN</button><button data-lang="de">DE</button><button data-lang="fr">FR</button><button data-lang="it">IT</button><button data-lang="es">ES</button></div>
+</nav><div class="lang-switch"><a class="active" data-lang="en" href="/getting-here/">EN</a><a data-lang="de" href="/de/getting-here/">DE</a><a data-lang="fr" href="/fr/getting-here/">FR</a><a data-lang="it" href="/it/getting-here/">IT</a><a data-lang="es" href="/es/getting-here/">ES</a></div>
 <button type="button" class="nav-toggle" id="navToggle" aria-label="Menu" aria-expanded="false"><span></span><span></span><span></span></button>
 </div></header>
 <div class="wrap"><p class="crumb" data-i18n="g6"><a href="/">Zuri Cliff</a> / Getting here</p></div>
@@ -117,15 +123,18 @@ var ZC_T = {"en":{"g1":"Villa","g2":"Location","g3":"Seasons","g4":"Getting here
       var k = el.getAttribute("data-i18n");
       if (t[k]) el.innerHTML = t[k];
     });
-    document.querySelectorAll(".lang-switch button").forEach(function(b){
+    document.querySelectorAll(".lang-switch a").forEach(function(b){
       b.classList.toggle("active", b.getAttribute("data-lang") === l);
     });
     setL(l);
   }
   var stored = getL();
   var nav = (navigator.language || "en").slice(0,2).toLowerCase();
-  apply(stored || (ZC_T[nav] ? nav : "en"));
-  document.querySelectorAll(".lang-switch button").forEach(function(b){
+  /* v37: Sprachfassungen sind eigene URLs; gespeicherte oder Browser-Sprache leitet auf /xx/ weiter */
+  var want = (stored && ZC_T[stored]) ? stored : (ZC_T[nav] ? nav : "en");
+  if (want !== "en" && !/^\/(de|fr|it|es)\//.test(location.pathname)) { location.replace("/" + want + location.pathname + location.search + location.hash); return; }
+  apply("en");
+  document.querySelectorAll(".lang-switch a").forEach(function(b){
     b.addEventListener("click", function(){ apply(b.getAttribute("data-lang")); });
   });
 })();
@@ -144,6 +153,15 @@ var ZC_T = {"en":{"g1":"Villa","g2":"Location","g3":"Seasons","g4":"Getting here
   place();
   if(mq.addEventListener){ mq.addEventListener('change',place); } else if(mq.addListener){ mq.addListener(place); }
 })();
+</script>
+<script>
+/* v37: Sprachwahl merken und Anker/Query mitnehmen */
+document.querySelectorAll('.lang-switch a').forEach(function (a) {
+  a.addEventListener('click', function () {
+    try { localStorage.setItem('zc_lang', a.getAttribute('data-lang')); } catch (e) {}
+    a.href = a.getAttribute('href') + location.search + location.hash;
+  });
+});
 </script>
 </body>
 </html>

@@ -6,6 +6,12 @@
 <title>Inside Zuri Cliff · South Zanzibar — Two Bedrooms Above the Indian Ocean</title>
 <meta name="description" content="Both bedrooms open straight onto the pool terrace, each with its own bathroom. A freestanding bath facing the ocean, a 12-metre infinity pool on the cliff edge, and the whole villa to yourselves. Adults only, four guests.">
 <link rel="canonical" href="https://zuricliff.com/villa/">
+<link rel="alternate" hreflang="en" href="https://zuricliff.com/villa/">
+<link rel="alternate" hreflang="de" href="https://zuricliff.com/de/villa/">
+<link rel="alternate" hreflang="fr" href="https://zuricliff.com/fr/villa/">
+<link rel="alternate" hreflang="it" href="https://zuricliff.com/it/villa/">
+<link rel="alternate" hreflang="es" href="https://zuricliff.com/es/villa/">
+<link rel="alternate" hreflang="x-default" href="https://zuricliff.com/villa/">
 <meta name="robots" content="index,follow,max-image-preview:large">
 <meta property="og:type" content="article">
 <meta property="og:title" content="The Villa — Zuri Cliff, South Zanzibar">
@@ -61,8 +67,8 @@ footer a:hover{color:var(--gold-light)}
 
     .top .wrap { display: flex; align-items: center; gap: 1.5rem; flex-wrap: wrap; }
     .lang-switch { display: flex; gap: 0.5rem; margin-left: auto; }
-    .lang-switch button { background: none; border: 0; padding: 0; cursor: pointer; font-family: inherit; font-size: 0.66rem; letter-spacing: 0.12em; text-transform: uppercase; color: rgba(255,255,255,0.45); transition: color 0.3s ease; }
-    .lang-switch button:hover, .lang-switch button.active { color: #d8bd77; }
+    .lang-switch a { background: none; border: 0; padding: 0; cursor: pointer; font-family: inherit; font-size: 0.66rem; letter-spacing: 0.12em; text-transform: uppercase; color: rgba(255,255,255,0.45); transition: color 0.3s ease; }
+    .lang-switch a:hover, .lang-switch a.active { color: #d8bd77; }
     @media (max-width: 720px) { .lang-switch { margin-left: 0; } }
 /* Burger-Menue wie Startseite, 27.09.2026 */
 .nav-toggle{display:none;background:none;border:0;cursor:pointer;padding:.4rem;flex-direction:column;gap:5px;position:relative;z-index:101;margin-left:auto}
@@ -75,7 +81,7 @@ nav.top-nav{position:fixed;top:0;right:0;height:100svh;width:min(78vw,320px);dis
 nav.top-nav.open{transform:translateX(0)}
 nav.top-nav a{margin-left:0;font-size:.9rem}
 nav.top-nav .lang-switch{display:flex;gap:1rem;width:100%;margin:1.8rem 0 0;padding-top:1.5rem;border-top:1px solid rgba(184,148,63,.18)}
-nav.top-nav .lang-switch button{font-size:.78rem}
+nav.top-nav .lang-switch a{font-size:.78rem}
 .nav-toggle{display:flex}
 .nav-toggle.open span:nth-child(1){transform:translateY(6.5px) rotate(45deg)}
 .nav-toggle.open span:nth-child(2){opacity:0}
@@ -106,7 +112,7 @@ nav.top-nav .lang-switch button{font-size:.78rem}
 <a href="/#seasons" data-i18n="navRates">Seasons</a>
 <a href="/getting-here/" data-i18n="navGetting">Getting here</a>
 <a href="/#stay" data-i18n="navStay">Enquire</a>
-</nav><div class="lang-switch"><button data-lang="en">EN</button><button data-lang="de">DE</button><button data-lang="fr">FR</button><button data-lang="it">IT</button><button data-lang="es">ES</button></div>
+</nav><div class="lang-switch"><a class="active" data-lang="en" href="/villa/">EN</a><a data-lang="de" href="/de/villa/">DE</a><a data-lang="fr" href="/fr/villa/">FR</a><a data-lang="it" href="/it/villa/">IT</a><a data-lang="es" href="/es/villa/">ES</a></div>
 <button type="button" class="nav-toggle" id="navToggle" aria-label="Menu" aria-expanded="false"><span></span><span></span><span></span></button>
 </div></header>
 <div class="wrap"><p class="crumb"><a href="/" data-i18n="crumbHome">Zuri Cliff</a> / <span data-i18n="crumbSelf">The Villa</span></p></div>
@@ -255,15 +261,18 @@ var ZC_T = {"en":{"vPlayFilm":"Play film · loads from YouTube","navVilla":"Vill
       var k = el.getAttribute("data-i18n");
       if (t[k]) el.innerHTML = t[k];
     });
-    document.querySelectorAll(".lang-switch button").forEach(function(b){
+    document.querySelectorAll(".lang-switch a").forEach(function(b){
       b.classList.toggle("active", b.getAttribute("data-lang") === l);
     });
     setL(l);
   }
   var stored = getL();
   var nav = (navigator.language || "en").slice(0,2).toLowerCase();
-  apply(stored || (ZC_T[nav] ? nav : "en"));
-  document.querySelectorAll(".lang-switch button").forEach(function(b){
+  /* v37: Sprachfassungen sind eigene URLs; gespeicherte oder Browser-Sprache leitet auf /xx/ weiter */
+  var want = (stored && ZC_T[stored]) ? stored : (ZC_T[nav] ? nav : "en");
+  if (want !== "en" && !/^\/(de|fr|it|es)\//.test(location.pathname)) { location.replace("/" + want + location.pathname + location.search + location.hash); return; }
+  apply("en");
+  document.querySelectorAll(".lang-switch a").forEach(function(b){
     b.addEventListener("click", function(){ apply(b.getAttribute("data-lang")); });
   });
 })();
@@ -291,6 +300,15 @@ document.addEventListener('click', function (e) {
   i.title = b.getAttribute('data-title'); i.allow = 'accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture'; i.allowFullscreen = true;
   i.style.cssText = 'position:absolute;inset:0;width:100%;height:100%;border:0';
   b.replaceWith(i);
+});
+</script>
+<script>
+/* v37: Sprachwahl merken und Anker/Query mitnehmen */
+document.querySelectorAll('.lang-switch a').forEach(function (a) {
+  a.addEventListener('click', function () {
+    try { localStorage.setItem('zc_lang', a.getAttribute('data-lang')); } catch (e) {}
+    a.href = a.getAttribute('href') + location.search + location.hash;
+  });
 });
 </script>
 </body></html>

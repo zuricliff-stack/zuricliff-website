@@ -7,6 +7,12 @@
 <title>Makunduchi &amp; South Zanzibar — What Is Around the Villa | Zuri Cliff · South Zanzibar</title>
 <meta name="description" content="Where Zuri Cliff sits on Zanzibar's south coast, and what is within reach: Jambiani and Paje for dinner, Kizimkazi for dolphins, Mtende Beach, the Kuza and Maalum swimming caves, Jozani Forest and Stone Town. Honest drive times from the villa.">
 <link rel="canonical" href="https://zuricliff.com/makunduchi/">
+<link rel="alternate" hreflang="en" href="https://zuricliff.com/makunduchi/">
+<link rel="alternate" hreflang="de" href="https://zuricliff.com/de/makunduchi/">
+<link rel="alternate" hreflang="fr" href="https://zuricliff.com/fr/makunduchi/">
+<link rel="alternate" hreflang="it" href="https://zuricliff.com/it/makunduchi/">
+<link rel="alternate" hreflang="es" href="https://zuricliff.com/es/makunduchi/">
+<link rel="alternate" hreflang="x-default" href="https://zuricliff.com/makunduchi/">
 <meta name="robots" content="index,follow,max-image-preview:large">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Makunduchi &amp; South Zanzibar — Zuri Cliff">
@@ -37,7 +43,7 @@
 <a href="/#seasons" data-i18n="m3">Seasons</a>
 <a href="/getting-here/" data-i18n="m4">Getting here</a>
 <a href="/#stay" data-i18n="m5">Enquire</a>
-</nav><div class="lang-switch"><button data-lang="en">EN</button><button data-lang="de">DE</button><button data-lang="fr">FR</button><button data-lang="it">IT</button><button data-lang="es">ES</button></div>
+</nav><div class="lang-switch"><a class="active" data-lang="en" href="/makunduchi/">EN</a><a data-lang="de" href="/de/makunduchi/">DE</a><a data-lang="fr" href="/fr/makunduchi/">FR</a><a data-lang="it" href="/it/makunduchi/">IT</a><a data-lang="es" href="/es/makunduchi/">ES</a></div>
 <button type="button" class="nav-toggle" id="navToggle" aria-label="Menu" aria-expanded="false"><span></span><span></span><span></span></button>
 </div></header>
 <div class="wrap"><p class="crumb" data-i18n="m6"><a href="/">Zuri Cliff</a> / Makunduchi</p></div>
@@ -158,15 +164,18 @@ var ZC_T = {"en":{"m46":"Show map · loads from OpenStreetMap","m47":"Shopping",
       var k = el.getAttribute("data-i18n");
       if (t[k]) el.innerHTML = t[k];
     });
-    document.querySelectorAll(".lang-switch button").forEach(function(b){
+    document.querySelectorAll(".lang-switch a").forEach(function(b){
       b.classList.toggle("active", b.getAttribute("data-lang") === l);
     });
     setL(l);
   }
   var stored = getL();
   var nav = (navigator.language || "en").slice(0,2).toLowerCase();
-  apply(stored || (ZC_T[nav] ? nav : "en"));
-  document.querySelectorAll(".lang-switch button").forEach(function(b){
+  /* v37: Sprachfassungen sind eigene URLs; gespeicherte oder Browser-Sprache leitet auf /xx/ weiter */
+  var want = (stored && ZC_T[stored]) ? stored : (ZC_T[nav] ? nav : "en");
+  if (want !== "en" && !/^\/(de|fr|it|es)\//.test(location.pathname)) { location.replace("/" + want + location.pathname + location.search + location.hash); return; }
+  apply("en");
+  document.querySelectorAll(".lang-switch a").forEach(function(b){
     b.addEventListener("click", function(){ apply(b.getAttribute("data-lang")); });
   });
 })();
@@ -185,6 +194,15 @@ var ZC_T = {"en":{"m46":"Show map · loads from OpenStreetMap","m47":"Shopping",
   place();
   if(mq.addEventListener){ mq.addEventListener('change',place); } else if(mq.addListener){ mq.addListener(place); }
 })();
+</script>
+<script>
+/* v37: Sprachwahl merken und Anker/Query mitnehmen */
+document.querySelectorAll('.lang-switch a').forEach(function (a) {
+  a.addEventListener('click', function () {
+    try { localStorage.setItem('zc_lang', a.getAttribute('data-lang')); } catch (e) {}
+    a.href = a.getAttribute('href') + location.search + location.hash;
+  });
+});
 </script>
 </body>
 </html>
