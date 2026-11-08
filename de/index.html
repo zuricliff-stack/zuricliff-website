@@ -1655,10 +1655,16 @@
     });
   });
   document.querySelectorAll('a[href*="airbnb.ch"]').forEach(a => {
-    a.addEventListener('click', () => { if (typeof gtag === 'function') gtag('event', 'ota_click', { event_category: 'outbound_booking', event_label: 'airbnb' }); });
+    a.addEventListener('click', () => {
+      if (typeof gtag === 'function') gtag('event', 'ota_click', { event_category: 'outbound_booking', event_label: 'airbnb' });
+      if (typeof fbq === 'function') fbq('trackCustom', 'OTAClick', { content_name: 'airbnb' });
+    });
   });
   document.querySelectorAll('a[href*="booking.com"]').forEach(a => {
-    a.addEventListener('click', () => { if (typeof gtag === 'function') gtag('event', 'ota_click', { event_category: 'outbound_booking', event_label: 'booking_com' }); });
+    a.addEventListener('click', () => {
+      if (typeof gtag === 'function') gtag('event', 'ota_click', { event_category: 'outbound_booking', event_label: 'booking_com' });
+      if (typeof fbq === 'function') fbq('trackCustom', 'OTAClick', { content_name: 'booking_com' });
+    });
   });
   document.querySelectorAll('a[href*="maps.app.goo.gl"], a[href*="google.com/maps"]').forEach(a => {
     a.addEventListener('click', () => { if (typeof gtag === 'function') gtag('event', 'directions_click', { event_category: 'engagement', event_label: 'google_maps' }); });
@@ -1726,9 +1732,19 @@
   if (reduceMotion && heroVideoEl) {
     heroVideoEl.removeAttribute('loop');
   } else if (heroVideoEl) {
+    /* v40 (08.11.2026): Hero-Video erst laden, wenn der Hero im Bild ist. Wer die Seite ueber einen Anker
+       (#stay, #enquire) oeffnet, sieht den Hero nicht und laedt die 2,3 MB nicht; das Poster traegt den Hero. */
     const start = () => { if (verbindungTraegt()) videoNachladen(heroVideoEl); };
-    if (document.readyState === 'complete') setTimeout(start, 300);
-    else window.addEventListener('load', () => setTimeout(start, 300), { once: true });
+    const heroStart = () => {
+      if ('IntersectionObserver' in window) {
+        const hio = new IntersectionObserver(es => {
+          if (es[0].isIntersecting) { start(); hio.disconnect(); }
+        }, { rootMargin: '200px 0px' });
+        hio.observe(heroVideoEl.parentElement || heroVideoEl);
+      } else { start(); }
+    };
+    if (document.readyState === 'complete') setTimeout(heroStart, 300);
+    else window.addEventListener('load', () => setTimeout(heroStart, 300), { once: true });
   }
   /* Retreat-Video erst laden, wenn die Sektion in Sichtweite kommt */
   (function () {
