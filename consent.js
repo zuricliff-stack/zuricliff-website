@@ -8,19 +8,19 @@
   var TXT = {
     en: { text: 'We use cookies. Essential cookies keep this site working. You decide about the rest. You can change your choice at any time under “Cookie settings” in the footer.',
           optA: 'Analytics (Google Analytics): helps us understand how the site is used.', optM: 'Marketing (Meta Pixel): lets us measure our advertising on Instagram and Facebook.',
-          decline: 'Decline', save: 'Save selection', accept: 'Accept all', privacy: 'Privacy Policy', terms: 'Terms & Conditions', cookies: 'Cookie Policy', imprint: 'Imprint', settings: 'Cookie settings' },
+          decline: 'Decline', save: 'Save selection', accept: 'Accept all', privacy: 'Privacy Policy', terms: 'Terms & Conditions', cookies: 'Cookie Policy', imprint: 'Imprint', settings: 'Cookie settings', more: 'Settings' },
     de: { text: 'Wir verwenden Cookies. Essenzielle Cookies halten die Website in Betrieb. Über alles Weitere entscheiden Sie. Ihre Wahl können Sie jederzeit unter «Cookie-Einstellungen» in der Fusszeile ändern.',
           optA: 'Analyse (Google Analytics): hilft uns zu verstehen, wie die Website genutzt wird.', optM: 'Marketing (Meta-Pixel): erlaubt uns, unsere Werbung auf Instagram und Facebook zu messen.',
-          decline: 'Ablehnen', save: 'Auswahl speichern', accept: 'Alle akzeptieren', privacy: 'Datenschutz', terms: 'AGB', cookies: 'Cookie-Richtlinie', imprint: 'Impressum', settings: 'Cookie-Einstellungen' },
+          decline: 'Ablehnen', save: 'Auswahl speichern', accept: 'Alle akzeptieren', privacy: 'Datenschutz', terms: 'AGB', cookies: 'Cookie-Richtlinie', imprint: 'Impressum', settings: 'Cookie-Einstellungen', more: 'Einstellungen' },
     fr: { text: 'Nous utilisons des cookies. Les cookies essentiels assurent le fonctionnement du site. Pour le reste, c’est vous qui décidez. Vous pouvez modifier votre choix à tout moment sous « Paramètres des cookies » en bas de page.',
           optA: 'Analyse (Google Analytics) : nous aide à comprendre l’utilisation du site.', optM: 'Marketing (pixel Meta) : nous permet de mesurer notre publicité sur Instagram et Facebook.',
-          decline: 'Refuser', save: 'Enregistrer la sélection', accept: 'Tout accepter', privacy: 'Confidentialité', terms: 'Conditions', cookies: 'Politique de cookies', imprint: 'Mentions légales', settings: 'Paramètres des cookies' },
+          decline: 'Refuser', save: 'Enregistrer la sélection', accept: 'Tout accepter', privacy: 'Confidentialité', terms: 'Conditions', cookies: 'Politique de cookies', imprint: 'Mentions légales', settings: 'Paramètres des cookies', more: 'Paramètres' },
     it: { text: 'Utilizziamo i cookie. I cookie essenziali garantiscono il funzionamento del sito. Per il resto decide lei. Può modificare la sua scelta in qualsiasi momento in «Impostazioni cookie» a fondo pagina.',
           optA: 'Analisi (Google Analytics): ci aiuta a capire come viene usato il sito.', optM: 'Marketing (pixel Meta): ci permette di misurare la nostra pubblicità su Instagram e Facebook.',
-          decline: 'Rifiuta', save: 'Salva selezione', accept: 'Accetta tutti', privacy: 'Privacy', terms: 'Condizioni', cookies: 'Cookie Policy', imprint: 'Note legali', settings: 'Impostazioni cookie' },
+          decline: 'Rifiuta', save: 'Salva selezione', accept: 'Accetta tutti', privacy: 'Privacy', terms: 'Condizioni', cookies: 'Cookie Policy', imprint: 'Note legali', settings: 'Impostazioni cookie', more: 'Impostazioni' },
     es: { text: 'Utilizamos cookies. Las cookies esenciales mantienen el sitio en funcionamiento. Del resto decide usted. Puede cambiar su elección en cualquier momento en «Configuración de cookies» al pie de página.',
           optA: 'Analítica (Google Analytics): nos ayuda a entender cómo se usa el sitio.', optM: 'Marketing (píxel de Meta): nos permite medir nuestra publicidad en Instagram y Facebook.',
-          decline: 'Rechazar', save: 'Guardar selección', accept: 'Aceptar todas', privacy: 'Privacidad', terms: 'Condiciones', cookies: 'Política de cookies', imprint: 'Aviso legal', settings: 'Configuración de cookies' }
+          decline: 'Rechazar', save: 'Guardar selección', accept: 'Aceptar todas', privacy: 'Privacidad', terms: 'Condiciones', cookies: 'Política de cookies', imprint: 'Aviso legal', settings: 'Configuración de cookies', more: 'Configurar' }
   };
 
   function lang() {
@@ -76,6 +76,14 @@
   function applyChoice(v) { var f = flags(v); if (f.a) loadAnalytics(); if (f.m) loadMarketing(); }
 
   var banner = null;
+  function isMobile() { return window.matchMedia && window.matchMedia('(max-width:600px)').matches; }
+  function setCompact(on) {
+    if (!banner) return;
+    banner.classList.toggle('zc-compact', !!on);
+    var b = banner.querySelector('[data-zc-act="save"]');
+    if (b) b.setAttribute('data-zc-t', on ? 'more' : 'save');
+    render();
+  }
   function syncHeight() {
     var h = (banner && !banner.hidden) ? banner.offsetHeight : 0;
     document.documentElement.style.setProperty('--cb-h', h + 'px');
@@ -110,7 +118,8 @@
       + '.zc-cb button:hover,.zc-cb button:focus-visible{background:#b8943f;color:#14110e}'
       + '.zc-legal{margin-top:1.2rem;font-size:.72rem;letter-spacing:.12em;text-transform:uppercase}.zc-legal a,.zc-legal button{color:inherit;opacity:.8;margin-right:1.2em;text-decoration:none;background:none;border:0;padding:0;font:inherit;letter-spacing:inherit;text-transform:inherit;cursor:pointer}'
       + '.zc-legal a:hover,.zc-legal button:hover{opacity:1;text-decoration:underline}'
-      + '@media(max-width:600px){.zc-cb{padding:13px 1.25rem calc(13px + env(safe-area-inset-bottom,0px));font-size:11px;max-height:92vh;overflow-y:auto}.zc-cb .zc-btns{width:100%}.zc-cb button{flex:1 1 0;width:auto;min-width:0;padding:11px 6px;font-size:9px;letter-spacing:.1em}}';
+      + '@media(max-width:600px){.zc-cb{padding:10px 1rem calc(10px + env(safe-area-inset-bottom,0px));gap:8px;font-size:10.5px;line-height:1.45;max-height:92vh;overflow-y:auto}.zc-cb .zc-btns{width:100%;gap:8px}.zc-cb button{flex:1 1 0;width:auto;min-width:0;padding:10px 4px;font-size:9px;letter-spacing:.08em}'
+      + '.zc-cb .zc-links{white-space:nowrap;overflow-x:auto;font-size:10px;margin-top:.35em}.zc-cb a{margin-right:.7em}.zc-cb.zc-compact .zc-opts{display:none}}';
     document.head.appendChild(s);
   }
   function legalHref(page) { return (typeof window.showLegal === 'function') ? '#' : '/#' + page; }
@@ -132,6 +141,7 @@
       var a = ev.target.closest('[data-zc-act]');
       if (a) {
         var act = a.getAttribute('data-zc-act');
+        if (act === 'save' && banner.classList.contains('zc-compact')) { setCompact(false); return; }
         if (act === 'save') {
           var ca = banner.querySelector('[data-zc-chk="a"]').checked, cm = banner.querySelector('[data-zc-chk="m"]').checked;
           act = ca && cm ? 'all' : ca ? 'analytics' : cm ? 'marketing' : 'none';
@@ -161,14 +171,14 @@
     syncHeight();
   }
 
-  window.zcConsent = { open: function () { if (!banner) return; banner.hidden = false; syncChecks(); render(); }, get: getChoice };
+  window.zcConsent = { open: function () { if (!banner) return; banner.hidden = false; syncChecks(); setCompact(false); render(); }, get: getChoice };
 
   // Vor der Wahl: nichts laden. Nach Zustimmung (gespeichert): sofort laden, wie bisher im Kopf der Seite.
   applyChoice(getChoice());
 
   document.addEventListener('DOMContentLoaded', function () {
     build(); footerLinks(); render();
-    if (!getChoice()) { banner.hidden = false; syncChecks(); render(); }
+    if (!getChoice()) { banner.hidden = false; syncChecks(); setCompact(isMobile()); render(); }
     window.addEventListener('resize', syncHeight);
     new MutationObserver(render).observe(document.documentElement, { attributes: true, attributeFilter: ['lang'] });
   });
