@@ -1,0 +1,11 @@
+# Versteckte Gaesteseite (Guidebook): nicht indexieren, Patch v43 (10.11.2026)
+/welcome-v4y6puc/*
+  X-Robots-Tag: noindex, nofollow, noarchive
+/de/welcome-v4y6puc/*
+  X-Robots-Tag: noindex, nofollow, noarchive
+/fr/welcome-v4y6puc/*
+  X-Robots-Tag: noindex, nofollow, noarchive
+/it/welcome-v4y6puc/*
+  X-Robots-Tag: noindex, nofollow, noarchive
+/es/welcome-v4y6puc/*
+  X-Robots-Tag: noindex, nofollow, noarchive
