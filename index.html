@@ -902,7 +902,7 @@
         <p data-i18n="otaLead">Check your dates and book</p>
         <a class="btn" href="https://airbnb.ch/h/zuricliff" target="_blank" rel="noopener">Airbnb</a>
         <a class="btn" id="otaBookingBtn" href="https://www.booking.com/hotel/tz/private-ocean-villa-infinity-pool-adults-only.en.html" target="_blank" rel="noopener">Booking.com</a>
-        <a class="btn" id="otaDirectBtn" href="https://letsbook.me/booking/zuricliff" target="_blank" rel="noopener" data-i18n="otaDirect">Book direct</a>
+        <a class="btn" id="otaDirectBtn" href="https://letsbook.me/booking/zuricliff?checkin=2026-11-30&amp;checkout=2026-12-03&amp;adults=2&amp;children=0" target="_blank" rel="noopener" data-i18n="otaDirect">Book direct</a>
       </div>
       <div class="season-grid">
         <div class="season-row">
@@ -1627,6 +1627,17 @@
       if (typeof fbq === 'function') fbq('trackCustom', 'OTAClick', { content_name: 'letsbook' });
     });
   });
+  (function () {
+    var a = document.getElementById('otaDirectBtn'); if (!a) return;
+    var u = new URL(a.href); var ci = u.searchParams.get('checkin'); if (!ci) return;
+    var today = new Date(); today.setHours(0, 0, 0, 0);
+    var p = ci.split('-'); var d = new Date(+p[0], +p[1] - 1, +p[2]);
+    if (d > today) return;
+    var f = function (x) { return x.getFullYear() + '-' + String(x.getMonth() + 1).padStart(2, '0') + '-' + String(x.getDate()).padStart(2, '0'); };
+    var n = new Date(today.getTime() + 86400000);
+    u.searchParams.set('checkin', f(n)); u.searchParams.set('checkout', f(new Date(n.getTime() + 3 * 86400000)));
+    a.href = u.toString();
+  })();
   document.querySelectorAll('a[href*="maps.app.goo.gl"], a[href*="google.com/maps"]').forEach(a => {
     a.addEventListener('click', () => { if (typeof gtag === 'function') gtag('event', 'directions_click', { event_category: 'engagement', event_label: 'google_maps' }); });
   });
