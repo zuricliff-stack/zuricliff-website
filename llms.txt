@@ -23,12 +23,13 @@ Zuri Cliff is a single-property private villa rental. This is the official websi
 - [Homepage](https://zuricliff.com/): Full villa overview, photo gallery, availability and enquiry form
 - [Our Story](https://zuricliff.com/#about): How the plot was found in January 2024, the Swiss family behind the villa, and the build from December 2024 to May 2025 by island craftsmen in local teak
 - [How it all began](https://zuricliff.com/story/): How the plot on the cliff was found in January 2024 and how the villa was built by local craftsmen until the opening on 1 November 2026, with photographs from the build
-- [Booking](https://zuricliff.com/#stay): Enquiry form; dates and rate confirmed by enquiry, no price published on the website
+- [Booking](https://zuricliff.com/#stay): Book direct (secure booking page), Airbnb or Booking.com; enquiry form; no price published on the website
 - [Location](https://zuricliff.com/#location): Map and directions from Zanzibar International Airport (ZNZ)
 - [Zanzibar Travel Guide](https://zuricliff.com/#guide): Practical guidance for visitors: getting to Zanzibar (flight routes, e-Visa, ZIC insurance), best time to travel, money and payments, health and safety, local customs, and nearby things to see and do around Makunduchi, Jambiani, Paje and Kizimkazi
 
 ## Other listings
 
+- [Book direct](https://letsbook.me/booking/zuricliff)
 - [Airbnb](https://airbnb.ch/h/zuricliff)
 - [Booking.com](https://www.booking.com/hotel/tz/private-ocean-villa-infinity-pool-adults-only.en.html)
 
