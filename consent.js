@@ -15,7 +15,7 @@
     fr: { text: 'Nous utilisons des cookies. Les cookies essentiels assurent le fonctionnement du site. Pour le reste, c’est vous qui décidez. Vous pouvez modifier votre choix à tout moment sous « Paramètres des cookies » en bas de page.',
           optA: 'Analyse (Google Analytics) : nous aide à comprendre l’utilisation du site.', optM: 'Marketing (pixel Meta) : nous permet de mesurer notre publicité sur Instagram et Facebook.',
           decline: 'Refuser', save: 'Enregistrer la sélection', accept: 'Tout accepter', privacy: 'Confidentialité', terms: 'Conditions', cookies: 'Politique de cookies', imprint: 'Mentions légales', settings: 'Paramètres des cookies', more: 'Paramètres' },
-    it: { text: 'Utilizziamo i cookie. I cookie essenziali garantiscono il funzionamento del sito. Per il resto decide lei. Può modificare la sua scelta in qualsiasi momento in «Impostazioni cookie» a fondo pagina.',
+    it: { text: 'Utilizziamo i cookie. I cookie essenziali garantiscono il funzionamento del sito. Per il resto decide Lei. Può modificare la Sua scelta in qualsiasi momento in «Impostazioni cookie» a fondo pagina.',
           optA: 'Analisi (Google Analytics): ci aiuta a capire come viene usato il sito.', optM: 'Marketing (pixel Meta): ci permette di misurare la nostra pubblicità su Instagram e Facebook.',
           decline: 'Rifiuta', save: 'Salva selezione', accept: 'Accetta tutti', privacy: 'Privacy', terms: 'Condizioni', cookies: 'Cookie Policy', imprint: 'Note legali', settings: 'Impostazioni cookie', more: 'Impostazioni' },
     es: { text: 'Utilizamos cookies. Las cookies esenciales mantienen el sitio en funcionamiento. Del resto decide usted. Puede cambiar su elección en cualquier momento en «Configuración de cookies» al pie de página.',
