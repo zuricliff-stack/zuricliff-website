@@ -167,6 +167,7 @@
   function render() {
     var T = TXT[lang()];
     document.querySelectorAll('[data-zc-t]').forEach(function (el) { el.textContent = T[el.getAttribute('data-zc-t')]; });
+    document.querySelectorAll('a[data-zc-t="imprint"]').forEach(function (a) { a.setAttribute('href', lang() === 'de' ? '/de/imprint/' : '/imprint/'); });
     if (banner) banner.setAttribute('lang', lang());
     syncHeight();
   }
